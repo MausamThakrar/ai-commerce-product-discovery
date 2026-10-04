@@ -1,0 +1,3865 @@
+[
+  {
+    "id": "product-1",
+    "title": "NordTrail Trail Runner 1",
+    "description": "A lightweight trail runner designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 196.29,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 43,
+    "variants": [
+      {
+        "id": "variant-1-default",
+        "sku": "OUT-0001",
+        "title": "Default",
+        "price": 196.29,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-2",
+    "title": "WildPath Trail Runner 2",
+    "description": "A lightweight trail runner designed for long-distance walking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 92.73,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 32,
+    "variants": [
+      {
+        "id": "variant-2-default",
+        "sku": "OUT-0002",
+        "title": "Default",
+        "price": 92.73,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-3",
+    "title": "WildPath Trail Runner 3",
+    "description": "A durable and reinforced trail runner designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 138.84,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "blue"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 17,
+    "variants": [
+      {
+        "id": "variant-3-default",
+        "sku": "OUT-0003",
+        "title": "Default",
+        "price": 138.84,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-4",
+    "title": "NordTrail Mountain Trek 4",
+    "description": "A durable and reinforced mountain trek designed for long-distance walking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 92.06,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 48,
+    "variants": [
+      {
+        "id": "variant-4-default",
+        "sku": "OUT-0004",
+        "title": "Default",
+        "price": 92.06,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-5",
+    "title": "TerraRun Trail Runner 5",
+    "description": "A lightweight trail runner designed for trail running. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 218.5,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "trail running",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "trail running"
+    },
+    "inventory": 38,
+    "variants": [
+      {
+        "id": "variant-5-default",
+        "sku": "OUT-0005",
+        "title": "Default",
+        "price": 218.5,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-6",
+    "title": "TerraRun Trail Runner 6",
+    "description": "A lightweight trail runner designed for long-distance walking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 64.76,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "grey",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 18,
+    "variants": [
+      {
+        "id": "variant-6-default",
+        "sku": "OUT-0006",
+        "title": "Default",
+        "price": 64.76,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-7",
+    "title": "WildPath Alpine Grip 7",
+    "description": "A lightweight alpine grip designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 181.25,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "hiking"
+    },
+    "inventory": 49,
+    "variants": [
+      {
+        "id": "variant-7-default",
+        "sku": "OUT-0007",
+        "title": "Default",
+        "price": 181.25,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-8",
+    "title": "TerraRun Trail Runner 8",
+    "description": "A durable and reinforced trail runner designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 139.68,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "hiking"
+    },
+    "inventory": 23,
+    "variants": [
+      {
+        "id": "variant-8-default",
+        "sku": "OUT-0008",
+        "title": "Default",
+        "price": 139.68,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-9",
+    "title": "PeakForge Alpine Grip 9",
+    "description": "A durable and reinforced alpine grip designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "PeakForge",
+    "price": 170.83,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 10,
+    "variants": [
+      {
+        "id": "variant-9-default",
+        "sku": "OUT-0009",
+        "title": "Default",
+        "price": 170.83,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-10",
+    "title": "WildPath Mountain Trek 10",
+    "description": "A durable and reinforced mountain trek designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 246.9,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "hiking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-10-default",
+        "sku": "OUT-0010",
+        "title": "Default",
+        "price": 246.9,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-11",
+    "title": "WildPath Mountain Trek 11",
+    "description": "A lightweight mountain trek designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 210.01,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 25,
+    "variants": [
+      {
+        "id": "variant-11-default",
+        "sku": "OUT-0011",
+        "title": "Default",
+        "price": 210.01,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-12",
+    "title": "TerraRun Trail Runner 12",
+    "description": "A durable and reinforced trail runner designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 180.09,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "blue"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 25,
+    "variants": [
+      {
+        "id": "variant-12-default",
+        "sku": "OUT-0012",
+        "title": "Default",
+        "price": 180.09,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-13",
+    "title": "AlpineCore Mountain Trek 13",
+    "description": "A lightweight mountain trek designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "AlpineCore",
+    "price": 156.8,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "orange",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 47,
+    "variants": [
+      {
+        "id": "variant-13-default",
+        "sku": "OUT-0013",
+        "title": "Default",
+        "price": 156.8,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-14",
+    "title": "WildPath Forest Runner 14",
+    "description": "A lightweight forest runner designed for long-distance walking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 150.91,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 5,
+    "variants": [
+      {
+        "id": "variant-14-default",
+        "sku": "OUT-0014",
+        "title": "Default",
+        "price": 150.91,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-15",
+    "title": "NordTrail Trail Runner 15",
+    "description": "A lightweight trail runner designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 168.28,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "grey",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "hiking"
+    },
+    "inventory": 24,
+    "variants": [
+      {
+        "id": "variant-15-default",
+        "sku": "OUT-0015",
+        "title": "Default",
+        "price": 168.28,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-16",
+    "title": "AlpineCore Summit Trail 16",
+    "description": "A durable and reinforced summit trail designed for long-distance walking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "AlpineCore",
+    "price": 221.16,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "orange"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 0,
+    "variants": [
+      {
+        "id": "variant-16-default",
+        "sku": "OUT-0016",
+        "title": "Default",
+        "price": 221.16,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-17",
+    "title": "NordTrail Summit Trail 17",
+    "description": "A durable and reinforced summit trail designed for mountain trekking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 107.7,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "black"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 10,
+    "variants": [
+      {
+        "id": "variant-17-default",
+        "sku": "OUT-0017",
+        "title": "Default",
+        "price": 107.7,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-18",
+    "title": "AlpineCore Trail Runner 18",
+    "description": "A lightweight trail runner designed for mountain trekking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "AlpineCore",
+    "price": 231.53,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "orange",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-18-default",
+        "sku": "OUT-0018",
+        "title": "Default",
+        "price": 231.53,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-19",
+    "title": "TerraRun Summit Trail 19",
+    "description": "A durable and reinforced summit trail designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 156.88,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 49,
+    "variants": [
+      {
+        "id": "variant-19-default",
+        "sku": "OUT-0019",
+        "title": "Default",
+        "price": 156.88,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-20",
+    "title": "WildPath Trail Runner 20",
+    "description": "A lightweight trail runner designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 234.82,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "mountain trekking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 19,
+    "variants": [
+      {
+        "id": "variant-20-default",
+        "sku": "OUT-0020",
+        "title": "Default",
+        "price": 234.82,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-21",
+    "title": "PeakForge Trail Runner 21",
+    "description": "A lightweight trail runner designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "PeakForge",
+    "price": 195.38,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "hiking"
+    },
+    "inventory": 4,
+    "variants": [
+      {
+        "id": "variant-21-default",
+        "sku": "OUT-0021",
+        "title": "Default",
+        "price": 195.38,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-22",
+    "title": "WildPath Mountain Trek 22",
+    "description": "A durable and reinforced mountain trek designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 82.03,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "orange"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "hiking"
+    },
+    "inventory": 33,
+    "variants": [
+      {
+        "id": "variant-22-default",
+        "sku": "OUT-0022",
+        "title": "Default",
+        "price": 82.03,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-23",
+    "title": "WildPath Forest Runner 23",
+    "description": "A lightweight forest runner designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 128.8,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "green",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "hiking"
+    },
+    "inventory": 42,
+    "variants": [
+      {
+        "id": "variant-23-default",
+        "sku": "OUT-0023",
+        "title": "Default",
+        "price": 128.8,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-24",
+    "title": "TerraRun Forest Runner 24",
+    "description": "A lightweight forest runner designed for long-distance walking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "TerraRun",
+    "price": 61.81,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "long-distance walking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "long-distance walking"
+    },
+    "inventory": 1,
+    "variants": [
+      {
+        "id": "variant-24-default",
+        "sku": "OUT-0024",
+        "title": "Default",
+        "price": 61.81,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-25",
+    "title": "WildPath Summit Trail 25",
+    "description": "A lightweight summit trail designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 63.2,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "hiking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-25-default",
+        "sku": "OUT-0025",
+        "title": "Default",
+        "price": 63.2,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-26",
+    "title": "NordTrail Mountain Trek 26",
+    "description": "A durable and reinforced mountain trek designed for trail running. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 151.83,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "trail running",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "trail running"
+    },
+    "inventory": 17,
+    "variants": [
+      {
+        "id": "variant-26-default",
+        "sku": "OUT-0026",
+        "title": "Default",
+        "price": 151.83,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-27",
+    "title": "AlpineCore Mountain Trek 27",
+    "description": "A durable and reinforced mountain trek designed for hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "AlpineCore",
+    "price": 205.92,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "blue"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 26,
+    "variants": [
+      {
+        "id": "variant-27-default",
+        "sku": "OUT-0027",
+        "title": "Default",
+        "price": 205.92,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-28",
+    "title": "PeakForge Trail Runner 28",
+    "description": "A durable and reinforced trail runner designed for trail running. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "PeakForge",
+    "price": 133.72,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "trail running",
+      "green"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "trail running"
+    },
+    "inventory": 29,
+    "variants": [
+      {
+        "id": "variant-28-default",
+        "sku": "OUT-0028",
+        "title": "Default",
+        "price": 133.72,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-29",
+    "title": "NordTrail Trail Runner 29",
+    "description": "A durable and reinforced trail runner designed for trail running. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "NordTrail",
+    "price": 98.73,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "trail running",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "trail running"
+    },
+    "inventory": 12,
+    "variants": [
+      {
+        "id": "variant-29-default",
+        "sku": "OUT-0029",
+        "title": "Default",
+        "price": 98.73,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-30",
+    "title": "WildPath Forest Runner 30",
+    "description": "A lightweight forest runner designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "trail-shoes",
+    "brand": "WildPath",
+    "price": 141.53,
+    "currency": "EUR",
+    "tags": [
+      "trail-shoes",
+      "hiking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "hiking"
+    },
+    "inventory": 4,
+    "variants": [
+      {
+        "id": "variant-30-default",
+        "sku": "OUT-0030",
+        "title": "Default",
+        "price": 141.53,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-31",
+    "title": "AlpineCore Weather Guard 31",
+    "description": "A lightweight weather guard designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 234.27,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "hiking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "hiking"
+    },
+    "inventory": 15,
+    "variants": [
+      {
+        "id": "variant-31-default",
+        "sku": "OUT-0031",
+        "title": "Default",
+        "price": 234.27,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-32",
+    "title": "PeakForge Trail Jacket 32",
+    "description": "A lightweight trail jacket designed for rainy weather. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "PeakForge",
+    "price": 229.49,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "rainy weather"
+    },
+    "inventory": 10,
+    "variants": [
+      {
+        "id": "variant-32-default",
+        "sku": "OUT-0032",
+        "title": "Default",
+        "price": 229.49,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-33",
+    "title": "AlpineCore Storm Shell 33",
+    "description": "A durable and reinforced storm shell designed for rainy weather. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 133.6,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "rainy weather"
+    },
+    "inventory": 46,
+    "variants": [
+      {
+        "id": "variant-33-default",
+        "sku": "OUT-0033",
+        "title": "Default",
+        "price": 133.6,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-34",
+    "title": "WildPath Trail Jacket 34",
+    "description": "A durable and reinforced trail jacket designed for mountaineering. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 242.74,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "mountaineering"
+    },
+    "inventory": 37,
+    "variants": [
+      {
+        "id": "variant-34-default",
+        "sku": "OUT-0034",
+        "title": "Default",
+        "price": 242.74,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-35",
+    "title": "WildPath Storm Shell 35",
+    "description": "A lightweight storm shell designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 144.36,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "orange",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "winter trekking"
+    },
+    "inventory": 33,
+    "variants": [
+      {
+        "id": "variant-35-default",
+        "sku": "OUT-0035",
+        "title": "Default",
+        "price": 144.36,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-36",
+    "title": "PeakForge Storm Shell 36",
+    "description": "A lightweight storm shell designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "PeakForge",
+    "price": 62.59,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "hiking",
+      "orange",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "hiking"
+    },
+    "inventory": 15,
+    "variants": [
+      {
+        "id": "variant-36-default",
+        "sku": "OUT-0036",
+        "title": "Default",
+        "price": 62.59,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-37",
+    "title": "AlpineCore Storm Shell 37",
+    "description": "A lightweight storm shell designed for mountaineering. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 65.4,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "orange",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "mountaineering"
+    },
+    "inventory": 42,
+    "variants": [
+      {
+        "id": "variant-37-default",
+        "sku": "OUT-0037",
+        "title": "Default",
+        "price": 65.4,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-38",
+    "title": "WildPath Weather Guard 38",
+    "description": "A lightweight weather guard designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 96.74,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "winter trekking"
+    },
+    "inventory": 25,
+    "variants": [
+      {
+        "id": "variant-38-default",
+        "sku": "OUT-0038",
+        "title": "Default",
+        "price": 96.74,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-39",
+    "title": "PeakForge Mountain Shell 39",
+    "description": "A lightweight mountain shell designed for rainy weather. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "PeakForge",
+    "price": 140.66,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "rainy weather"
+    },
+    "inventory": 36,
+    "variants": [
+      {
+        "id": "variant-39-default",
+        "sku": "OUT-0039",
+        "title": "Default",
+        "price": 140.66,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-40",
+    "title": "NordTrail Storm Shell 40",
+    "description": "A durable and reinforced storm shell designed for mountaineering. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 235.65,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "blue"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "mountaineering"
+    },
+    "inventory": 4,
+    "variants": [
+      {
+        "id": "variant-40-default",
+        "sku": "OUT-0040",
+        "title": "Default",
+        "price": 235.65,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-41",
+    "title": "PeakForge Mountain Shell 41",
+    "description": "A durable and reinforced mountain shell designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "PeakForge",
+    "price": 189.71,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "winter trekking"
+    },
+    "inventory": 39,
+    "variants": [
+      {
+        "id": "variant-41-default",
+        "sku": "OUT-0041",
+        "title": "Default",
+        "price": 189.71,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-42",
+    "title": "WildPath Storm Shell 42",
+    "description": "A lightweight storm shell designed for winter trekking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 101.89,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "blue",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "winter trekking"
+    },
+    "inventory": 6,
+    "variants": [
+      {
+        "id": "variant-42-default",
+        "sku": "OUT-0042",
+        "title": "Default",
+        "price": 101.89,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-43",
+    "title": "WildPath Alpine Jacket 43",
+    "description": "A lightweight alpine jacket designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 89.72,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "winter trekking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-43-default",
+        "sku": "OUT-0043",
+        "title": "Default",
+        "price": 89.72,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-44",
+    "title": "TerraRun Weather Guard 44",
+    "description": "A lightweight weather guard designed for rainy weather. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "TerraRun",
+    "price": 175.86,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "rainy weather"
+    },
+    "inventory": 17,
+    "variants": [
+      {
+        "id": "variant-44-default",
+        "sku": "OUT-0044",
+        "title": "Default",
+        "price": 175.86,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-45",
+    "title": "NordTrail Storm Shell 45",
+    "description": "A durable and reinforced storm shell designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 197.25,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "winter trekking"
+    },
+    "inventory": 35,
+    "variants": [
+      {
+        "id": "variant-45-default",
+        "sku": "OUT-0045",
+        "title": "Default",
+        "price": 197.25,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-46",
+    "title": "AlpineCore Weather Guard 46",
+    "description": "A lightweight weather guard designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 158.12,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "hiking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 23,
+    "variants": [
+      {
+        "id": "variant-46-default",
+        "sku": "OUT-0046",
+        "title": "Default",
+        "price": 158.12,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-47",
+    "title": "WildPath Weather Guard 47",
+    "description": "A lightweight weather guard designed for mountaineering. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 110.65,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountaineering"
+    },
+    "inventory": 50,
+    "variants": [
+      {
+        "id": "variant-47-default",
+        "sku": "OUT-0047",
+        "title": "Default",
+        "price": 110.65,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-48",
+    "title": "NordTrail Mountain Shell 48",
+    "description": "A lightweight mountain shell designed for mountaineering. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 119.74,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountaineering"
+    },
+    "inventory": 35,
+    "variants": [
+      {
+        "id": "variant-48-default",
+        "sku": "OUT-0048",
+        "title": "Default",
+        "price": 119.74,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-49",
+    "title": "AlpineCore Weather Guard 49",
+    "description": "A lightweight weather guard designed for mountaineering. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 225.28,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountaineering"
+    },
+    "inventory": 1,
+    "variants": [
+      {
+        "id": "variant-49-default",
+        "sku": "OUT-0049",
+        "title": "Default",
+        "price": 225.28,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-50",
+    "title": "PeakForge Mountain Shell 50",
+    "description": "A lightweight mountain shell designed for rainy weather. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "PeakForge",
+    "price": 80.84,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "green",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "rainy weather"
+    },
+    "inventory": 44,
+    "variants": [
+      {
+        "id": "variant-50-default",
+        "sku": "OUT-0050",
+        "title": "Default",
+        "price": 80.84,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-51",
+    "title": "NordTrail Trail Jacket 51",
+    "description": "A lightweight trail jacket designed for hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 212.32,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "hiking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "hiking"
+    },
+    "inventory": 29,
+    "variants": [
+      {
+        "id": "variant-51-default",
+        "sku": "OUT-0051",
+        "title": "Default",
+        "price": 212.32,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-52",
+    "title": "TerraRun Mountain Shell 52",
+    "description": "A lightweight mountain shell designed for mountaineering. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "TerraRun",
+    "price": 128.69,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountaineering"
+    },
+    "inventory": 17,
+    "variants": [
+      {
+        "id": "variant-52-default",
+        "sku": "OUT-0052",
+        "title": "Default",
+        "price": 128.69,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-53",
+    "title": "NordTrail Mountain Shell 53",
+    "description": "A durable and reinforced mountain shell designed for winter trekking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 115.23,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "orange"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "winter trekking"
+    },
+    "inventory": 1,
+    "variants": [
+      {
+        "id": "variant-53-default",
+        "sku": "OUT-0053",
+        "title": "Default",
+        "price": 115.23,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-54",
+    "title": "NordTrail Mountain Shell 54",
+    "description": "A durable and reinforced mountain shell designed for mountaineering. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "NordTrail",
+    "price": 70.68,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "mountaineering",
+      "black"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "mountaineering"
+    },
+    "inventory": 27,
+    "variants": [
+      {
+        "id": "variant-54-default",
+        "sku": "OUT-0054",
+        "title": "Default",
+        "price": 70.68,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-55",
+    "title": "TerraRun Mountain Shell 55",
+    "description": "A lightweight mountain shell designed for rainy weather. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "TerraRun",
+    "price": 228.9,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "grey",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "rainy weather"
+    },
+    "inventory": 12,
+    "variants": [
+      {
+        "id": "variant-55-default",
+        "sku": "OUT-0055",
+        "title": "Default",
+        "price": 228.9,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-56",
+    "title": "TerraRun Storm Shell 56",
+    "description": "A lightweight storm shell designed for rainy weather. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "TerraRun",
+    "price": 135.26,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "rainy weather"
+    },
+    "inventory": 42,
+    "variants": [
+      {
+        "id": "variant-56-default",
+        "sku": "OUT-0056",
+        "title": "Default",
+        "price": 135.26,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-57",
+    "title": "TerraRun Weather Guard 57",
+    "description": "A lightweight weather guard designed for winter trekking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "TerraRun",
+    "price": 150.42,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "green",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "winter trekking"
+    },
+    "inventory": 42,
+    "variants": [
+      {
+        "id": "variant-57-default",
+        "sku": "OUT-0057",
+        "title": "Default",
+        "price": 150.42,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-58",
+    "title": "AlpineCore Mountain Shell 58",
+    "description": "A durable and reinforced mountain shell designed for rainy weather. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 74.46,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "rainy weather",
+      "orange"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "rainy weather"
+    },
+    "inventory": 26,
+    "variants": [
+      {
+        "id": "variant-58-default",
+        "sku": "OUT-0058",
+        "title": "Default",
+        "price": 74.46,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-59",
+    "title": "AlpineCore Alpine Jacket 59",
+    "description": "A lightweight alpine jacket designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "AlpineCore",
+    "price": 106.38,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "winter trekking"
+    },
+    "inventory": 27,
+    "variants": [
+      {
+        "id": "variant-59-default",
+        "sku": "OUT-0059",
+        "title": "Default",
+        "price": 106.38,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-60",
+    "title": "WildPath Weather Guard 60",
+    "description": "A durable and reinforced weather guard designed for winter trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "hiking-jackets",
+    "brand": "WildPath",
+    "price": 184.13,
+    "currency": "EUR",
+    "tags": [
+      "hiking-jackets",
+      "winter trekking",
+      "grey",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "winter trekking"
+    },
+    "inventory": 32,
+    "variants": [
+      {
+        "id": "variant-60-default",
+        "sku": "OUT-0060",
+        "title": "Default",
+        "price": 184.13,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-61",
+    "title": "AlpineCore Summit Backpack 61",
+    "description": "A durable and reinforced summit backpack designed for day hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 212.68,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "day hiking"
+    },
+    "inventory": 48,
+    "variants": [
+      {
+        "id": "variant-61-default",
+        "sku": "OUT-0061",
+        "title": "Default",
+        "price": 212.68,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-62",
+    "title": "PeakForge Adventure Pack 62",
+    "description": "A lightweight adventure pack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 58.24,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "travel"
+    },
+    "inventory": 30,
+    "variants": [
+      {
+        "id": "variant-62-default",
+        "sku": "OUT-0062",
+        "title": "Default",
+        "price": 58.24,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-63",
+    "title": "WildPath Trail Pack 63",
+    "description": "A lightweight trail pack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 147.88,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 15,
+    "variants": [
+      {
+        "id": "variant-63-default",
+        "sku": "OUT-0063",
+        "title": "Default",
+        "price": 147.88,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-64",
+    "title": "PeakForge Trail Pack 64",
+    "description": "A lightweight trail pack designed for day hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 209.82,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "day hiking"
+    },
+    "inventory": 44,
+    "variants": [
+      {
+        "id": "variant-64-default",
+        "sku": "OUT-0064",
+        "title": "Default",
+        "price": 209.82,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-65",
+    "title": "WildPath Trek Backpack 65",
+    "description": "A lightweight trek backpack designed for day hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 140.29,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "day hiking"
+    },
+    "inventory": 29,
+    "variants": [
+      {
+        "id": "variant-65-default",
+        "sku": "OUT-0065",
+        "title": "Default",
+        "price": 140.29,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-66",
+    "title": "WildPath Alpine Pack 66",
+    "description": "A durable and reinforced alpine pack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 138.18,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 10,
+    "variants": [
+      {
+        "id": "variant-66-default",
+        "sku": "OUT-0066",
+        "title": "Default",
+        "price": 138.18,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-67",
+    "title": "AlpineCore Trek Backpack 67",
+    "description": "A durable and reinforced trek backpack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 145.92,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 15,
+    "variants": [
+      {
+        "id": "variant-67-default",
+        "sku": "OUT-0067",
+        "title": "Default",
+        "price": 145.92,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-68",
+    "title": "TerraRun Trek Backpack 68",
+    "description": "A durable and reinforced trek backpack designed for day hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 103.34,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "blue"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "day hiking"
+    },
+    "inventory": 20,
+    "variants": [
+      {
+        "id": "variant-68-default",
+        "sku": "OUT-0068",
+        "title": "Default",
+        "price": 103.34,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-69",
+    "title": "WildPath Trail Pack 69",
+    "description": "A lightweight trail pack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 187.79,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "travel"
+    },
+    "inventory": 45,
+    "variants": [
+      {
+        "id": "variant-69-default",
+        "sku": "OUT-0069",
+        "title": "Default",
+        "price": 187.79,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-70",
+    "title": "PeakForge Trail Pack 70",
+    "description": "A durable and reinforced trail pack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 142.18,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 3,
+    "variants": [
+      {
+        "id": "variant-70-default",
+        "sku": "OUT-0070",
+        "title": "Default",
+        "price": 142.18,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-71",
+    "title": "PeakForge Trek Backpack 71",
+    "description": "A lightweight trek backpack designed for weekend hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 125.08,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "orange",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 0,
+    "variants": [
+      {
+        "id": "variant-71-default",
+        "sku": "OUT-0071",
+        "title": "Default",
+        "price": 125.08,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-72",
+    "title": "TerraRun Adventure Pack 72",
+    "description": "A lightweight adventure pack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 92.88,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 27,
+    "variants": [
+      {
+        "id": "variant-72-default",
+        "sku": "OUT-0072",
+        "title": "Default",
+        "price": 92.88,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-73",
+    "title": "AlpineCore Trail Pack 73",
+    "description": "A durable and reinforced trail pack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 217.1,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 8,
+    "variants": [
+      {
+        "id": "variant-73-default",
+        "sku": "OUT-0073",
+        "title": "Default",
+        "price": 217.1,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-74",
+    "title": "WildPath Alpine Pack 74",
+    "description": "A lightweight alpine pack designed for day hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 177.55,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "day hiking"
+    },
+    "inventory": 8,
+    "variants": [
+      {
+        "id": "variant-74-default",
+        "sku": "OUT-0074",
+        "title": "Default",
+        "price": 177.55,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-75",
+    "title": "AlpineCore Summit Backpack 75",
+    "description": "A durable and reinforced summit backpack designed for day hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 91.33,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "day hiking"
+    },
+    "inventory": 20,
+    "variants": [
+      {
+        "id": "variant-75-default",
+        "sku": "OUT-0075",
+        "title": "Default",
+        "price": 91.33,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-76",
+    "title": "TerraRun Trek Backpack 76",
+    "description": "A durable and reinforced trek backpack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 143.06,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 47,
+    "variants": [
+      {
+        "id": "variant-76-default",
+        "sku": "OUT-0076",
+        "title": "Default",
+        "price": 143.06,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-77",
+    "title": "WildPath Trail Pack 77",
+    "description": "A lightweight trail pack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 199.85,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 15,
+    "variants": [
+      {
+        "id": "variant-77-default",
+        "sku": "OUT-0077",
+        "title": "Default",
+        "price": 199.85,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-78",
+    "title": "PeakForge Trail Pack 78",
+    "description": "A lightweight trail pack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 182.89,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "travel"
+    },
+    "inventory": 36,
+    "variants": [
+      {
+        "id": "variant-78-default",
+        "sku": "OUT-0078",
+        "title": "Default",
+        "price": 182.89,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-79",
+    "title": "PeakForge Trek Backpack 79",
+    "description": "A lightweight trek backpack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 170.45,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "orange",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 47,
+    "variants": [
+      {
+        "id": "variant-79-default",
+        "sku": "OUT-0079",
+        "title": "Default",
+        "price": 170.45,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-80",
+    "title": "NordTrail Summit Backpack 80",
+    "description": "A lightweight summit backpack designed for mountain trekking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "NordTrail",
+    "price": 164.16,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "mountain trekking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "mountain trekking"
+    },
+    "inventory": 24,
+    "variants": [
+      {
+        "id": "variant-80-default",
+        "sku": "OUT-0080",
+        "title": "Default",
+        "price": 164.16,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-81",
+    "title": "AlpineCore Summit Backpack 81",
+    "description": "A lightweight summit backpack designed for day hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 188.44,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "day hiking"
+    },
+    "inventory": 19,
+    "variants": [
+      {
+        "id": "variant-81-default",
+        "sku": "OUT-0081",
+        "title": "Default",
+        "price": 188.44,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-82",
+    "title": "WildPath Trail Pack 82",
+    "description": "A durable and reinforced trail pack designed for day hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "WildPath",
+    "price": 62.79,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "day hiking"
+    },
+    "inventory": 41,
+    "variants": [
+      {
+        "id": "variant-82-default",
+        "sku": "OUT-0082",
+        "title": "Default",
+        "price": 62.79,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-83",
+    "title": "TerraRun Trail Pack 83",
+    "description": "A lightweight trail pack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 241.16,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "grey",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-83-default",
+        "sku": "OUT-0083",
+        "title": "Default",
+        "price": 241.16,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-84",
+    "title": "AlpineCore Summit Backpack 84",
+    "description": "A durable and reinforced summit backpack designed for weekend hiking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 210.64,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 34,
+    "variants": [
+      {
+        "id": "variant-84-default",
+        "sku": "OUT-0084",
+        "title": "Default",
+        "price": 210.64,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-85",
+    "title": "AlpineCore Trek Backpack 85",
+    "description": "A durable and reinforced trek backpack designed for weekend hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 219.34,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "weekend hiking",
+      "green"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "weekend hiking"
+    },
+    "inventory": 5,
+    "variants": [
+      {
+        "id": "variant-85-default",
+        "sku": "OUT-0085",
+        "title": "Default",
+        "price": 219.34,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-86",
+    "title": "TerraRun Trek Backpack 86",
+    "description": "A durable and reinforced trek backpack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 54.74,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "travel"
+    },
+    "inventory": 20,
+    "variants": [
+      {
+        "id": "variant-86-default",
+        "sku": "OUT-0086",
+        "title": "Default",
+        "price": 54.74,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-87",
+    "title": "PeakForge Trek Backpack 87",
+    "description": "A durable and reinforced trek backpack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "PeakForge",
+    "price": 104.93,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "travel"
+    },
+    "inventory": 38,
+    "variants": [
+      {
+        "id": "variant-87-default",
+        "sku": "OUT-0087",
+        "title": "Default",
+        "price": 104.93,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-88",
+    "title": "TerraRun Alpine Pack 88",
+    "description": "A lightweight alpine pack designed for day hiking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "TerraRun",
+    "price": 97.27,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "day hiking",
+      "black",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "day hiking"
+    },
+    "inventory": 26,
+    "variants": [
+      {
+        "id": "variant-88-default",
+        "sku": "OUT-0088",
+        "title": "Default",
+        "price": 97.27,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-89",
+    "title": "AlpineCore Alpine Pack 89",
+    "description": "A durable and reinforced alpine pack designed for travel. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "AlpineCore",
+    "price": 138.63,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "grey"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "travel"
+    },
+    "inventory": 1,
+    "variants": [
+      {
+        "id": "variant-89-default",
+        "sku": "OUT-0089",
+        "title": "Default",
+        "price": 138.63,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-90",
+    "title": "NordTrail Adventure Pack 90",
+    "description": "A lightweight adventure pack designed for travel. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "backpacks",
+    "brand": "NordTrail",
+    "price": 181.79,
+    "currency": "EUR",
+    "tags": [
+      "backpacks",
+      "travel",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "travel"
+    },
+    "inventory": 23,
+    "variants": [
+      {
+        "id": "variant-90-default",
+        "sku": "OUT-0090",
+        "title": "Default",
+        "price": 181.79,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-91",
+    "title": "AlpineCore Storm Camp 91",
+    "description": "A durable and reinforced storm camp designed for mountain camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 189.57,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "green",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "mountain camping"
+    },
+    "inventory": 17,
+    "variants": [
+      {
+        "id": "variant-91-default",
+        "sku": "OUT-0091",
+        "title": "Default",
+        "price": 189.57,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-92",
+    "title": "TerraRun Mountain Tent 92",
+    "description": "A lightweight mountain tent designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 72.91,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "backpacking"
+    },
+    "inventory": 34,
+    "variants": [
+      {
+        "id": "variant-92-default",
+        "sku": "OUT-0092",
+        "title": "Default",
+        "price": 72.91,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-93",
+    "title": "PeakForge Trail Shelter 93",
+    "description": "A durable and reinforced trail shelter designed for backpacking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 193.92,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "green"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "backpacking"
+    },
+    "inventory": 48,
+    "variants": [
+      {
+        "id": "variant-93-default",
+        "sku": "OUT-0093",
+        "title": "Default",
+        "price": 193.92,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-94",
+    "title": "WildPath Storm Camp 94",
+    "description": "A lightweight storm camp designed for mountain camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 94.5,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "green",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "green",
+      "use_case": "mountain camping"
+    },
+    "inventory": 11,
+    "variants": [
+      {
+        "id": "variant-94-default",
+        "sku": "OUT-0094",
+        "title": "Default",
+        "price": 94.5,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-95",
+    "title": "TerraRun Explorer Tent 95",
+    "description": "A lightweight explorer tent designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 159.67,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "backpacking"
+    },
+    "inventory": 44,
+    "variants": [
+      {
+        "id": "variant-95-default",
+        "sku": "OUT-0095",
+        "title": "Default",
+        "price": 159.67,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-96",
+    "title": "PeakForge Adventure Shelter 96",
+    "description": "A durable and reinforced adventure shelter designed for camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 144.74,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "camping",
+      "grey",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "camping"
+    },
+    "inventory": 21,
+    "variants": [
+      {
+        "id": "variant-96-default",
+        "sku": "OUT-0096",
+        "title": "Default",
+        "price": 144.74,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-97",
+    "title": "PeakForge Explorer Tent 97",
+    "description": "A lightweight explorer tent designed for mountain camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 129.14,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "black",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "black",
+      "use_case": "mountain camping"
+    },
+    "inventory": 4,
+    "variants": [
+      {
+        "id": "variant-97-default",
+        "sku": "OUT-0097",
+        "title": "Default",
+        "price": 129.14,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-98",
+    "title": "WildPath Explorer Tent 98",
+    "description": "A durable and reinforced explorer tent designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 247.78,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "black",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "backpacking"
+    },
+    "inventory": 7,
+    "variants": [
+      {
+        "id": "variant-98-default",
+        "sku": "OUT-0098",
+        "title": "Default",
+        "price": 247.78,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-99",
+    "title": "WildPath Adventure Shelter 99",
+    "description": "A durable and reinforced adventure shelter designed for backpacking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 230.7,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "grey"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "backpacking"
+    },
+    "inventory": 19,
+    "variants": [
+      {
+        "id": "variant-99-default",
+        "sku": "OUT-0099",
+        "title": "Default",
+        "price": 230.7,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-100",
+    "title": "WildPath Adventure Shelter 100",
+    "description": "A lightweight adventure shelter designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 241.02,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "orange",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "mountain camping"
+    },
+    "inventory": 6,
+    "variants": [
+      {
+        "id": "variant-100-default",
+        "sku": "OUT-0100",
+        "title": "Default",
+        "price": 241.02,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-101",
+    "title": "PeakForge Trail Shelter 101",
+    "description": "A lightweight trail shelter designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 96.97,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "blue",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountain camping"
+    },
+    "inventory": 35,
+    "variants": [
+      {
+        "id": "variant-101-default",
+        "sku": "OUT-0101",
+        "title": "Default",
+        "price": 96.97,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-102",
+    "title": "NordTrail Trail Shelter 102",
+    "description": "A durable and reinforced trail shelter designed for camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "NordTrail",
+    "price": 142.98,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "camping",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "camping"
+    },
+    "inventory": 2,
+    "variants": [
+      {
+        "id": "variant-102-default",
+        "sku": "OUT-0102",
+        "title": "Default",
+        "price": 142.98,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-103",
+    "title": "PeakForge Mountain Tent 103",
+    "description": "A durable and reinforced mountain tent designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 186.48,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "black"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "black",
+      "use_case": "mountain camping"
+    },
+    "inventory": 16,
+    "variants": [
+      {
+        "id": "variant-103-default",
+        "sku": "OUT-0103",
+        "title": "Default",
+        "price": 186.48,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-104",
+    "title": "WildPath Trail Shelter 104",
+    "description": "A lightweight trail shelter designed for weekend trips. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 230.68,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "weekend trips",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "weekend trips"
+    },
+    "inventory": 9,
+    "variants": [
+      {
+        "id": "variant-104-default",
+        "sku": "OUT-0104",
+        "title": "Default",
+        "price": 230.68,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-105",
+    "title": "NordTrail Explorer Tent 105",
+    "description": "A durable and reinforced explorer tent designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "NordTrail",
+    "price": 73.87,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "grey",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "backpacking"
+    },
+    "inventory": 44,
+    "variants": [
+      {
+        "id": "variant-105-default",
+        "sku": "OUT-0105",
+        "title": "Default",
+        "price": 73.87,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-106",
+    "title": "TerraRun Adventure Shelter 106",
+    "description": "A durable and reinforced adventure shelter designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 65.09,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "grey"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "mountain camping"
+    },
+    "inventory": 2,
+    "variants": [
+      {
+        "id": "variant-106-default",
+        "sku": "OUT-0106",
+        "title": "Default",
+        "price": 65.09,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-107",
+    "title": "AlpineCore Mountain Tent 107",
+    "description": "A lightweight mountain tent designed for mountain camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 241.38,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountain camping"
+    },
+    "inventory": 36,
+    "variants": [
+      {
+        "id": "variant-107-default",
+        "sku": "OUT-0107",
+        "title": "Default",
+        "price": 241.38,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-108",
+    "title": "WildPath Explorer Tent 108",
+    "description": "A lightweight explorer tent designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 143.1,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "blue",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountain camping"
+    },
+    "inventory": 41,
+    "variants": [
+      {
+        "id": "variant-108-default",
+        "sku": "OUT-0108",
+        "title": "Default",
+        "price": 143.1,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-109",
+    "title": "AlpineCore Mountain Tent 109",
+    "description": "A durable and reinforced mountain tent designed for backpacking. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 242.81,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "grey"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "backpacking"
+    },
+    "inventory": 30,
+    "variants": [
+      {
+        "id": "variant-109-default",
+        "sku": "OUT-0109",
+        "title": "Default",
+        "price": 242.81,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-110",
+    "title": "TerraRun Adventure Shelter 110",
+    "description": "A lightweight adventure shelter designed for mountain camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 114.96,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "blue",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "blue",
+      "use_case": "mountain camping"
+    },
+    "inventory": 44,
+    "variants": [
+      {
+        "id": "variant-110-default",
+        "sku": "OUT-0110",
+        "title": "Default",
+        "price": 114.96,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-111",
+    "title": "AlpineCore Mountain Tent 111",
+    "description": "A lightweight mountain tent designed for weekend trips. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 66.61,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "weekend trips",
+      "grey",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "weekend trips"
+    },
+    "inventory": 16,
+    "variants": [
+      {
+        "id": "variant-111-default",
+        "sku": "OUT-0111",
+        "title": "Default",
+        "price": 66.61,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-112",
+    "title": "TerraRun Explorer Tent 112",
+    "description": "A lightweight explorer tent designed for weekend trips. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 141.4,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "weekend trips",
+      "orange",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "weekend trips"
+    },
+    "inventory": 3,
+    "variants": [
+      {
+        "id": "variant-112-default",
+        "sku": "OUT-0112",
+        "title": "Default",
+        "price": 141.4,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-113",
+    "title": "PeakForge Storm Camp 113",
+    "description": "A durable and reinforced storm camp designed for mountain camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "PeakForge",
+    "price": 201.0,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "mountain camping",
+      "grey"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "mountain camping"
+    },
+    "inventory": 13,
+    "variants": [
+      {
+        "id": "variant-113-default",
+        "sku": "OUT-0113",
+        "title": "Default",
+        "price": 201.0,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-114",
+    "title": "TerraRun Storm Camp 114",
+    "description": "A durable and reinforced storm camp designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "TerraRun",
+    "price": 73.29,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "grey",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "backpacking"
+    },
+    "inventory": 40,
+    "variants": [
+      {
+        "id": "variant-114-default",
+        "sku": "OUT-0114",
+        "title": "Default",
+        "price": 73.29,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-115",
+    "title": "WildPath Trail Shelter 115",
+    "description": "A lightweight trail shelter designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 130.6,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "orange",
+      "waterproof",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": true,
+      "color": "orange",
+      "use_case": "backpacking"
+    },
+    "inventory": 14,
+    "variants": [
+      {
+        "id": "variant-115-default",
+        "sku": "OUT-0115",
+        "title": "Default",
+        "price": 130.6,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-116",
+    "title": "NordTrail Adventure Shelter 116",
+    "description": "A lightweight adventure shelter designed for camping. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "NordTrail",
+    "price": 235.53,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "camping",
+      "grey",
+      "lightweight"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": true,
+      "color": "grey",
+      "use_case": "camping"
+    },
+    "inventory": 18,
+    "variants": [
+      {
+        "id": "variant-116-default",
+        "sku": "OUT-0116",
+        "title": "Default",
+        "price": 235.53,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-117",
+    "title": "WildPath Mountain Tent 117",
+    "description": "A durable and reinforced mountain tent designed for weekend trips. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 140.36,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "weekend trips",
+      "blue",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "blue",
+      "use_case": "weekend trips"
+    },
+    "inventory": 9,
+    "variants": [
+      {
+        "id": "variant-117-default",
+        "sku": "OUT-0117",
+        "title": "Default",
+        "price": 140.36,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-118",
+    "title": "AlpineCore Trail Shelter 118",
+    "description": "A durable and reinforced trail shelter designed for backpacking. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 116.98,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "backpacking",
+      "grey",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "grey",
+      "use_case": "backpacking"
+    },
+    "inventory": 50,
+    "variants": [
+      {
+        "id": "variant-118-default",
+        "sku": "OUT-0118",
+        "title": "Default",
+        "price": 116.98,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-119",
+    "title": "WildPath Mountain Tent 119",
+    "description": "A durable and reinforced mountain tent designed for camping. It is waterproof and weather-resistant and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "WildPath",
+    "price": 164.98,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "camping",
+      "orange",
+      "waterproof"
+    ],
+    "attributes": {
+      "waterproof": true,
+      "lightweight": false,
+      "color": "orange",
+      "use_case": "camping"
+    },
+    "inventory": 42,
+    "variants": [
+      {
+        "id": "variant-119-default",
+        "sku": "OUT-0119",
+        "title": "Default",
+        "price": 164.98,
+        "available": true,
+        "options": {}
+      }
+    ]
+  },
+  {
+    "id": "product-120",
+    "title": "AlpineCore Trail Shelter 120",
+    "description": "A durable and reinforced trail shelter designed for weekend trips. It is breathable and designed for dry conditions and suitable for outdoor adventures.",
+    "category": "camping",
+    "brand": "AlpineCore",
+    "price": 115.49,
+    "currency": "EUR",
+    "tags": [
+      "camping",
+      "weekend trips",
+      "green"
+    ],
+    "attributes": {
+      "waterproof": false,
+      "lightweight": false,
+      "color": "green",
+      "use_case": "weekend trips"
+    },
+    "inventory": 48,
+    "variants": [
+      {
+        "id": "variant-120-default",
+        "sku": "OUT-0120",
+        "title": "Default",
+        "price": 115.49,
+        "available": true,
+        "options": {}
+      }
+    ]
+  }
+]
