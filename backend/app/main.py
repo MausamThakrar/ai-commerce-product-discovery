@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query
 
 from app.search.keyword import KeywordSearchEngine
+from app.search.semantic import SemanticSearchEngine
 from app.services.catalog import ProductCatalog
 
 
@@ -16,6 +17,9 @@ keyword_search = KeywordSearchEngine(
     catalog.all()
 )
 
+semantic_search = SemanticSearchEngine(
+    catalog.all()
+)
 
 @app.get("/health")
 def health():
@@ -38,6 +42,20 @@ def search(
     return {
         "query": q,
         "results": keyword_search.search(
+            query=q,
+            top_k=top_k,
+        ),
+    }
+
+@app.get("/search/semantic")
+def semantic_search_endpoint(
+    q: str = Query(min_length=1),
+    top_k: int = Query(default=10, ge=1, le=50),
+):
+    return {
+        "query": q,
+        "search_type": "semantic",
+        "results": semantic_search.search(
             query=q,
             top_k=top_k,
         ),
