@@ -24,7 +24,7 @@ class SemanticSearchEngine:
 
     def _product_to_text(self, product: Product) -> str:
         attributes = " ".join(
-            f"{key}: {value}"
+            f"{key} {value}"
             for key, value in product.attributes.items()
         )
 
@@ -39,31 +39,30 @@ class SemanticSearchEngine:
             ]
         )
 
-    def search(
-        self,
-        query: str,
-        top_k: int = 10,
-    ) -> list[dict]:
+    def score_all(self, query: str):
         query_embedding = self.model.encode(
             [query],
             normalize_embeddings=True,
         )
 
-        scores = cosine_similarity(
+        return cosine_similarity(
             query_embedding,
             self.product_embeddings,
         )[0]
 
+    def search(
+        self,
+        query: str,
+        top_k: int = 10,
+    ) -> list[dict]:
+        scores = self.score_all(query)
+
         ranked_indices = scores.argsort()[::-1][:top_k]
 
-        results = []
-
-        for index in ranked_indices:
-            results.append(
-                {
-                    "product": self.products[index],
-                    "score": float(scores[index]),
-                }
-            )
-
-        return results
+        return [
+            {
+                "product": self.products[index],
+                "score": float(scores[index]),
+            }
+            for index in ranked_indices
+        ]

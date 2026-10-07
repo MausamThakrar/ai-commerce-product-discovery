@@ -24,6 +24,11 @@ class KeywordSearchEngine:
         )
 
     def _product_to_text(self, product: Product) -> str:
+        attributes = " ".join(
+            f"{key} {value}"
+            for key, value in product.attributes.items()
+        )
+
         return " ".join(
             [
                 product.title,
@@ -31,33 +36,31 @@ class KeywordSearchEngine:
                 product.category,
                 product.brand,
                 " ".join(product.tags),
+                attributes,
             ]
         )
+
+    def score_all(self, query: str):
+        query_vector = self.vectorizer.transform([query])
+
+        return cosine_similarity(
+            query_vector,
+            self.product_vectors,
+        )[0]
 
     def search(
         self,
         query: str,
         top_k: int = 10,
     ) -> list[dict]:
-        query_vector = self.vectorizer.transform([query])
-
-        scores = cosine_similarity(
-            query_vector,
-            self.product_vectors,
-        )[0]
+        scores = self.score_all(query)
 
         ranked_indices = scores.argsort()[::-1][:top_k]
 
-        results = []
-
-        for index in ranked_indices:
-            product = self.products[index]
-
-            results.append(
-                {
-                    "product": product,
-                    "score": float(scores[index]),
-                }
-            )
-
-        return results
+        return [
+            {
+                "product": self.products[index],
+                "score": float(scores[index]),
+            }
+            for index in ranked_indices
+        ]

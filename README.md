@@ -1,121 +1,490 @@
 # AI Commerce Product Discovery
 
-An ecommerce product discovery project exploring keyword search, semantic retrieval, hybrid search, and AI-assisted product search.
+An AI-powered ecommerce product discovery system that understands natural-language shopping requests, combines keyword and semantic retrieval, applies hard commerce constraints, and asks for clarification when a shopper's intent is ambiguous.
 
-## Current Status
+The goal is to build a reusable product-discovery engine for ecommerce rather than a platform-specific implementation.
 
-Day 2 complete.
+## Current capabilities
 
-Current capabilities:
+The project currently supports:
 
-- Structured ecommerce product catalog
-- 120 synthetic products
-- FastAPI backend
-- TF-IDF keyword search
-- Semantic search using sentence embeddings
-- Ranked product retrieval
-- Keyword vs semantic search comparison
+- Synthetic ecommerce catalog with products, variants, inventory, attributes, brands, categories, and pricing
+- TF-IDF keyword search baseline
+- Semantic search using sentence-transformer embeddings
+- Hybrid keyword + semantic ranking
+- Hard ecommerce constraints for:
+  - category
+  - brand
+  - minimum price
+  - maximum price
+  - color
+  - waterproof
+  - lightweight
+  - inventory availability
+- Natural-language shopping intent extraction
+- Category recognition
+- Price extraction
+- Product attribute extraction
+- Ambiguity detection
+- Clarification questions
+- Commerce-aware search API
 - Automated tests
 
-## Tech Stack
+## Example
 
-- Python 3.12
-- FastAPI
-- Pydantic
-- scikit-learn
-- sentence-transformers
-- pytest
+A shopper can search with:
 
-## API Endpoints
+```text
+black waterproof hiking shoes under €120
+```
 
-- `GET /health`
-- `GET /products`
-- `GET /search`
-- `GET /search/semantic`
+The system extracts structured commerce intent:
 
-## Example Search
+```json
+{
+  "category": "trail-shoes",
+  "brand": null,
+  "min_price": null,
+  "max_price": 120,
+  "color": "black",
+  "waterproof": true,
+  "lightweight": null,
+  "in_stock": null
+}
+```
+
+These constraints are applied as hard filters before recommendations are returned.
+
+This prevents semantically relevant but commercially invalid products from being recommended.
+
+For example, a highly relevant €180 shoe cannot appear when the shopper explicitly requests products under €120.
+
+## Ambiguous queries
+
+Semantic similarity alone can produce misleading ecommerce recommendations when the shopper has not specified a product type.
+
+For example:
 
 ```text
 something light for walking through wet mountains
 ```
 
-## Search Approaches
-
-### Keyword Search
-
-The baseline search uses TF-IDF to rank products based on lexical similarity between the shopper query and product content.
-
-This approach works well when the query contains words that also appear directly in product titles, descriptions, categories, or tags.
-
-### Semantic Search
-
-Semantic search uses sentence embeddings to retrieve products based on meaning rather than exact keyword overlap.
-
-For example, for the query:
+The system can understand:
 
 ```text
-something light for walking through wet mountains
+lightweight = true
+waterproof = true
 ```
 
-semantic search can associate:
+but the shopper may be looking for footwear, clothing, a backpack, or camping equipment.
 
-- `light` with `lightweight`
-- `wet` with `waterproof` and `weather-resistant`
-- `mountains` with `hiking` and `mountain trekking`
+Instead of blindly returning the products with the highest embedding similarity, the commerce layer can respond with a clarification request:
 
-This allows relevant products to be retrieved even when the shopper uses different wording from the product catalog.
+```text
+What type of product are you looking for:
+footwear, a jacket, a backpack, or camping equipment?
+```
 
-## Keyword vs Semantic Search
+## Search architecture
 
-The project currently supports both keyword and semantic retrieval so their behavior can be compared directly.
+```text
+Natural-language query
+        |
+        v
+Shopping intent parser
+        |
+        +---- category
+        +---- brand
+        +---- price range
+        +---- color
+        +---- waterproof
+        +---- lightweight
+        +---- availability
+        |
+        v
+Ambiguity check
+        |
+   +----+----+
+   |         |
+clarify    search
+             |
+             v
+     Keyword retrieval
+          +
+     Semantic retrieval
+             |
+             v
+       Hybrid ranking
+             |
+             v
+    Hard commerce filters
+             |
+             v
+      Product results
+```
 
-Keyword search tends to perform well when the shopper uses explicit catalog terminology.
+## Retrieval methods
 
-Semantic search is better at understanding natural-language intent and related concepts.
+### Keyword search
 
-The initial comparison also exposes an important limitation of semantic similarity alone.
+The keyword baseline uses TF-IDF with unigram and bigram features.
 
-For example, a query about staying dry while hiking may retrieve waterproof backpacks because they are semantically related to the query, even if the shopper intended to find clothing or footwear.
+It performs well when the shopper's language closely matches catalog text.
 
-This shows why ecommerce search needs more than semantic similarity.
+### Semantic search
 
-The next step is to combine semantic relevance with keyword ranking and structured product constraints.
+Semantic search uses:
 
-## Current Limitations
+```text
+sentence-transformers/all-MiniLM-L6-v2
+```
 
-The current search system does not yet enforce structured ecommerce requirements such as:
+Product embeddings include information such as:
 
+- title
+- description
 - category
-- minimum and maximum price
 - brand
-- color
-- availability
-- waterproof status
-- lightweight status
+- tags
+- structured attributes
 
-It also does not yet extract these requirements automatically from natural-language queries.
+This allows conceptually similar products to be retrieved even when exact keywords differ.
 
-## Roadmap
+### Hybrid search
 
-Next steps:
+The commerce search layer combines both retrieval signals.
 
-- Hybrid keyword + semantic search
-- Structured ecommerce filtering
-- Natural-language query understanding
-- Search evaluation
-- Frontend interface
-- AI-generated product explanations
+Current default weighting:
 
-## Testing
+```text
+Semantic: 65%
+Keyword:  35%
+```
 
-Run the test suite from the `backend` directory:
+Scores are normalized before being combined.
+
+The weighting is currently a product-level default and can be tuned later.
+
+## Hard constraints vs relevance
+
+A key design principle is the separation between:
+
+```text
+Relevance
+```
+
+and:
+
+```text
+Eligibility
+```
+
+Keyword and semantic scores determine how relevant a product is.
+
+Commerce constraints determine whether the product is allowed to appear at all.
+
+For example:
+
+```text
+Query:
+waterproof hiking shoes under €120
+```
+
+A product must satisfy the requested category, waterproof requirement, and price ceiling before ranking matters.
+
+## API
+
+The backend is built with FastAPI.
+
+### Health
+
+```http
+GET /health
+```
+
+### Products
+
+```http
+GET /products
+```
+
+### Keyword search
+
+```http
+GET /search?q=mountain+walking
+```
+
+### Semantic search
+
+```http
+GET /search/semantic?q=something+for+wet+mountain+walks
+```
+
+### Commerce search
+
+```http
+GET /search/commerce?q=black+waterproof+hiking+shoes+under+€120
+```
+
+Commerce search automatically:
+
+1. interprets the natural-language query
+2. extracts structured shopping constraints
+3. checks whether the request is sufficiently clear
+4. asks for clarification when necessary
+5. performs hybrid retrieval
+6. enforces hard commerce constraints
+7. returns ranked products
+
+## Example commerce response
+
+```json
+{
+  "query": "black waterproof hiking shoes under €120",
+  "intent": {
+    "category": "trail-shoes",
+    "brand": null,
+    "min_price": null,
+    "max_price": 120.0,
+    "color": "black",
+    "waterproof": true,
+    "lightweight": null,
+    "in_stock": null,
+    "category_candidates": [
+      "trail-shoes"
+    ],
+    "needs_clarification": false,
+    "clarification_question": null
+  },
+  "needs_clarification": false,
+  "clarification_question": null,
+  "results": []
+}
+```
+
+Actual results depend on products available in the generated catalog.
+
+## Catalog
+
+The current development catalog contains 120 deterministic synthetic products across:
+
+```text
+trail-shoes
+hiking-jackets
+backpacks
+camping
+```
+
+Products contain ecommerce-oriented data including:
+
+- brand
+- category
+- price
+- currency
+- inventory
+- tags
+- attributes
+- variants
+- SKUs
+- option values
+
+The synthetic catalog keeps development reproducible while the core architecture remains independent of a specific ecommerce platform.
+
+## Project structure
+
+```text
+ai-commerce-product-discovery/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── product.py
+│   │   │   └── intent.py
+│   │   │
+│   │   ├── search/
+│   │   │   ├── keyword.py
+│   │   │   ├── semantic.py
+│   │   │   ├── hybrid.py
+│   │   │   ├── filters.py
+│   │   │   ├── intent.py
+│   │   │   └── commerce.py
+│   │   │
+│   │   └── services/
+│   │       └── catalog.py
+│   │
+│   ├── data/
+│   │   └── products.json
+│   │
+│   ├── scripts/
+│   │   └── generate_catalog.py
+│   │
+│   ├── tests/
+│   │   ├── test_keyword_search.py
+│   │   ├── test_semantic_search.py
+│   │   ├── test_hybrid_search.py
+│   │   └── test_intent.py
+│   │
+│   └── pytest.ini
+│
+├── requirements.txt
+└── README.md
+```
+
+## Running locally
+
+Create and activate a virtual environment:
 
 ```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the API:
+
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
+
+Open the API documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Tests
+
+Run:
+
+```bash
+cd backend
 python -m pytest
 ```
 
-Current test status:
+Current test suite:
 
 ```text
-4 passed
+10 passed
 ```
+
+The tests cover:
+
+- keyword retrieval
+- semantic retrieval
+- hybrid retrieval
+- hard commerce constraints
+- structured intent extraction
+- price parsing
+- natural category inference
+- ambiguous-query detection
+
+## Current development status
+
+### Completed
+
+**Foundation**
+
+- Ecommerce product model
+- Synthetic product catalog
+- FastAPI backend
+
+**Search**
+
+- Keyword retrieval
+- Semantic retrieval
+- Hybrid retrieval
+- Score normalization
+- Ecommerce filters
+
+**Shopping intelligence**
+
+- Natural-language intent parsing
+- Category recognition
+- Attribute extraction
+- Price constraints
+- Brand recognition
+- Ambiguity detection
+- Clarification handling
+- Commerce search orchestration
+
+### Next
+
+The next stage turns the backend into a complete shopping experience:
+
+```text
+Storefront interface
+        ↓
+Conversational product discovery
+        ↓
+Product comparison and refinement
+        ↓
+Cart actions
+        ↓
+Catalog import / ecommerce integrations
+        ↓
+Deployment and portfolio demo
+```
+
+## Planned product experience
+
+The finished application is intended to support interactions such as:
+
+```text
+Shopper:
+I need waterproof hiking shoes under €120.
+
+Assistant:
+[matching products]
+
+Shopper:
+Which one is the lightest?
+
+Assistant:
+[comparison using previous recommendations]
+
+Shopper:
+Show me something similar in black.
+
+Assistant:
+[refined recommendations]
+
+Shopper:
+Compare the first two.
+
+Assistant:
+[structured comparison]
+
+Shopper:
+Add the cheaper one to my cart.
+
+Assistant:
+[cart updated]
+```
+
+## Technology
+
+```text
+Python
+FastAPI
+Pydantic
+scikit-learn
+sentence-transformers
+NumPy
+pytest
+```
+
+Frontend and deployment tooling will be added in the next development stages.
+
+## Project goal
+
+This project is being built as a production-oriented AI commerce application rather than a standalone machine-learning experiment.
+
+The focus is on combining AI retrieval with actual ecommerce requirements such as product attributes, inventory, pricing, shopper constraints, ambiguity, and eventually conversational shopping and cart actions.
