@@ -1,3 +1,4 @@
+from app.models.intent import ShoppingIntent
 from app.models.product import Product
 from app.search.hybrid import HybridSearchEngine
 from app.search.intent import parse_shopping_intent
@@ -13,32 +14,15 @@ class CommerceSearchService:
         self.hybrid_search = hybrid_search
 
         self.brands = sorted(
-            {
-                product.brand
-                for product in products
-            }
+            {product.brand for product in products}
         )
 
-    def search(
+    def search_with_intent(
         self,
         query: str,
+        intent: ShoppingIntent,
         top_k: int = 5,
     ):
-        intent = parse_shopping_intent(
-            query=query,
-            brands=self.brands,
-        )
-
-        if intent.needs_clarification:
-            return {
-                "query": query,
-                "intent": intent.model_dump(),
-                "needs_clarification": True,
-                "clarification_question":
-                    intent.clarification_question,
-                "results": [],
-            }
-
         results = self.hybrid_search.search(
             query=query,
             top_k=top_k,
@@ -60,3 +44,29 @@ class CommerceSearchService:
             "results_count": len(results),
             "results": results,
         }
+
+    def search(
+        self,
+        query: str,
+        top_k: int = 5,
+    ):
+        intent = parse_shopping_intent(
+            query=query,
+            brands=self.brands,
+        )
+
+        if intent.needs_clarification:
+            return {
+                "query": query,
+                "intent": intent.model_dump(),
+                "needs_clarification": True,
+                "clarification_question":
+                    intent.clarification_question,
+                "results": [],
+            }
+
+        return self.search_with_intent(
+            query=query,
+            intent=intent,
+            top_k=top_k,
+        )

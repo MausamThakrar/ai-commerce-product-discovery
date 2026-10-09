@@ -489,3 +489,232 @@ button {
     padding: 34px 24px;
   }
 }
+.conversationPanel,
+.comparisonPanel {
+  margin-top: 46px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.conversationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.conversationHeader h2,
+.comparisonPanel h2 {
+  margin: 10px 0 22px;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+
+.cartButton {
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.chatMessage {
+  max-width: 75%;
+  padding: 13px 16px;
+  border-radius: 16px;
+  line-height: 1.5;
+}
+
+.chatMessage.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: white;
+}
+
+.chatMessage.assistant {
+  align-self: flex-start;
+  background: var(--surface-soft);
+}
+
+.chatForm {
+  display: flex;
+  gap: 10px;
+}
+
+.chatForm input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 17px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.chatForm button {
+  border: 0;
+  background: var(--accent);
+  color: white;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.chatForm button:disabled,
+.conversationSuggestions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.conversationSuggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.conversationSuggestions button {
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 11px;
+  font-size: 12px;
+}
+
+.conversationSuggestions button:hover {
+  background: var(--surface-soft);
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.comparisonCard {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+}
+
+.comparisonCard h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.comparisonPrice {
+  font-size: 22px;
+}
+
+.comparisonDetails {
+  margin-top: 20px;
+}
+
+.comparisonDetails > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparisonDetails > span > strong {
+  text-align: right;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cartItemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cartItemInfo > span {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityControls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.quantityControls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.removeButton {
+  width: fit-content;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-decoration: underline;
+  color: var(--text-soft);
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 2px solid var(--text);
+  font-size: 20px;
+}
+
+@media (max-width: 640px) {
+  .conversationPanel,
+  .comparisonPanel {
+    padding: 22px;
+  }
+
+  .conversationHeader {
+    flex-direction: column;
+  }
+
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .chatMessage {
+    max-width: 90%;
+  }
+
+  .chatForm {
+    flex-direction: column;
+  }
+
+  .chatForm button {
+    width: 100%;
+  }
+
+  .cartItem {
+    flex-direction: column;
+  }
+}

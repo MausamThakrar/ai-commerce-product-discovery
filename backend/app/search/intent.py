@@ -130,6 +130,7 @@ def _extract_prices(query: str):
 def parse_shopping_intent(
     query: str,
     brands: list[str] | None = None,
+    require_category: bool = True,
 ) -> ShoppingIntent:
 
     normalized = query.lower().strip()
@@ -227,7 +228,7 @@ def parse_shopping_intent(
             f"Are you looking for {', '.join(labels)}?"
         )
 
-    elif len(categories) == 0:
+    elif len(categories) == 0 and require_category:
         intent.needs_clarification = True
 
         intent.clarification_question = (

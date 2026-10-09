@@ -50,3 +50,37 @@ export type ProductVariant = {
     results_count?: number;
     results: SearchResult[];
   };
+  
+  export type ConversationContext = {
+    original_query: string | null;
+    intent: ShoppingIntent | null;
+    current_product_ids: string[];
+  };
+  
+  export type ConversationAction =
+    | "search"
+    | "refine"
+    | "answer"
+    | "compare"
+    | "add_to_cart"
+    | "clarify";
+  
+  export type ConversationResponse = {
+    action: ConversationAction;
+    message: string;
+    context: ConversationContext;
+    results?: SearchResult[];
+    comparison?: Product[];
+    selected_product?: Product | null;
+  };
+  
+  export type CartItem = {
+    product: Product;
+    quantity: number;
+  };
+  
+  export type ChatMessage = {
+    id: string;
+    role: "user" | "assistant";
+    text: string;
+  };

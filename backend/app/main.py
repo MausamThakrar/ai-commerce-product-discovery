@@ -6,6 +6,8 @@ from app.services.catalog import ProductCatalog
 from app.search.commerce import CommerceSearchService
 from app.search.hybrid import HybridSearchEngine
 from fastapi.middleware.cors import CORSMiddleware
+from app.models.conversation import ConversationRequest
+from app.search.conversation import ConversationService
 
 app = FastAPI(
     title="AI Commerce Product Discovery",
@@ -44,6 +46,21 @@ commerce_search = CommerceSearchService(
     products=catalog.all(),
     hybrid_search=hybrid_search,
 )
+
+conversation_service = ConversationService(
+    products=catalog.all(),
+    commerce_search=commerce_search,
+)
+
+@app.post("/conversation")
+def conversation_endpoint(
+    request: ConversationRequest,
+):
+    return conversation_service.handle(
+        message=request.message,
+        context=request.context,
+        top_k=request.top_k,
+    )
 
 @app.get("/search/commerce")
 def commerce_search_endpoint(
