@@ -308,7 +308,7 @@ class ConversationService:
                 return {
                     "action": "refine",
                     "message":
-                        f"I refined the products using: {message}",
+                        f"I updated the results based on: {message}",
                     "context": new_context,
                     "results": result["results"],
                 }
