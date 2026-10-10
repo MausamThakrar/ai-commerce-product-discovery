@@ -9,12 +9,17 @@ class CommerceSearchService:
         self,
         products: list[Product],
         hybrid_search: HybridSearchEngine,
+        hide_unavailable: bool = False,
     ):
         self.products = products
         self.hybrid_search = hybrid_search
+        self.hide_unavailable = hide_unavailable
 
         self.brands = sorted(
-            {product.brand for product in products}
+            {
+                product.brand
+                for product in products
+            }
         )
 
     def search_with_intent(
@@ -23,6 +28,14 @@ class CommerceSearchService:
         intent: ShoppingIntent,
         top_k: int = 5,
     ):
+        in_stock = intent.in_stock
+
+        if (
+            in_stock is None
+            and self.hide_unavailable
+        ):
+            in_stock = True
+
         results = self.hybrid_search.search(
             query=query,
             top_k=top_k,
@@ -33,7 +46,7 @@ class CommerceSearchService:
             color=intent.color,
             waterproof=intent.waterproof,
             lightweight=intent.lightweight,
-            in_stock=intent.in_stock,
+            in_stock=in_stock,
         )
 
         return {

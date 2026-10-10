@@ -23,7 +23,11 @@ class ConversationRequest(BaseModel):
         default_factory=ConversationContext
     )
 
-    top_k: int = 5
+    top_k: int | None = Field(
+        default=None,
+        ge=1,
+        le=20,
+    )
 
 
 class ConversationResponse(BaseModel):
