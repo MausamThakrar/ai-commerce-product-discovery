@@ -2,13 +2,15 @@
 
 A conversational AI-powered product discovery and shopping experience for ecommerce.
 
-The application understands natural-language shopping requests, combines keyword and semantic retrieval, enforces hard commerce constraints, supports follow-up refinement and product comparison, and allows shoppers to add recommended products to a cart.
+The application understands natural-language shopping requests, combines lexical and semantic retrieval, applies hard commerce constraints, supports conversational refinement and product comparison, and lets shoppers add recommended products to a cart.
 
-The core discovery engine is intentionally ecommerce-platform independent. Platform-specific catalog integrations can be added through adapters.
+It also includes a merchant-facing catalog management layer that can import different ecommerce data formats, rebuild the search runtime, and configure discovery behavior without restarting the application.
+
+The core architecture is intentionally ecommerce-platform independent. Shopify is supported as one catalog adapter rather than being coupled to the discovery engine.
 
 ---
 
-## Current product experience
+## What the application does
 
 A shopper can start with:
 
@@ -16,15 +18,15 @@ A shopper can start with:
 waterproof hiking shoes under €200
 ```
 
-The system understands the request, retrieves relevant products and applies the requested commerce constraints.
+The system interprets the request, extracts structured shopping constraints and retrieves matching products.
 
-The shopper can then continue naturally:
+The shopper can then continue:
 
 ```text
 only black ones
 ```
 
-The existing search is refined rather than restarted.
+The previous search context is retained and refined.
 
 Then:
 
@@ -40,7 +42,7 @@ Then:
 compare the first two
 ```
 
-A structured product comparison is displayed.
+A structured comparison is displayed.
 
 And:
 
@@ -50,13 +52,29 @@ add the cheapest one to cart
 
 The selected product is added to the cart.
 
-This allows product discovery to behave more like a guided shopping interaction than a traditional keyword search page.
+On the merchant side, a different product catalog can be imported at runtime:
+
+```text
+JSON / CSV / Shopify-style data
+              ↓
+        Catalog adapter
+              ↓
+      Common product model
+              ↓
+       Runtime rebuild
+              ↓
+Keyword + semantic indexes
+              ↓
+   Existing storefront search
+```
+
+No application restart is required after a catalog import.
 
 ---
 
-## Current capabilities
+# Current capabilities
 
-### Product discovery
+## Product discovery
 
 - Natural-language product search
 - TF-IDF keyword retrieval
@@ -64,8 +82,12 @@ This allows product discovery to behave more like a guided shopping interaction 
 - Hybrid keyword + semantic ranking
 - Normalized retrieval scores
 - Commerce-aware result filtering
+- Runtime-configurable retrieval weights
+- Runtime-configurable recommendation count
 
-### Commerce constraints
+---
+
+## Commerce constraints
 
 The system can enforce:
 
@@ -78,7 +100,7 @@ The system can enforce:
 - lightweight requirement
 - inventory availability
 
-These are treated as hard constraints rather than ranking preferences.
+These constraints are treated separately from relevance.
 
 For example:
 
@@ -101,13 +123,13 @@ can be interpreted as:
 }
 ```
 
-A €180 product cannot appear simply because it has a high semantic relevance score.
+A semantically relevant €180 product cannot appear when the shopper explicitly requests products under €120.
 
 ---
 
-## Shopping intent and clarification
+# Shopping intent and clarification
 
-The intent layer extracts structured shopping requirements from natural language.
+The intent layer converts natural-language shopping requests into structured ecommerce constraints.
 
 For example:
 
@@ -124,7 +146,7 @@ waterproof  = true
 max_price   = 120
 ```
 
-The system can also detect when a request is not specific enough.
+The system can also detect when there is not enough information to safely recommend a product type.
 
 For example:
 
@@ -141,7 +163,7 @@ waterproof  = true
 
 but it does not clearly specify whether the shopper wants footwear, clothing, a backpack or camping equipment.
 
-Instead of returning arbitrary semantically similar products, the system asks for clarification.
+Instead of blindly returning the highest semantic matches, the application asks for clarification:
 
 ```text
 What type of product are you looking for:
@@ -150,18 +172,18 @@ footwear, a jacket, a backpack, or camping equipment?
 
 ---
 
-## Conversational shopping
+# Conversational shopping
 
 Search state is retained between shopper messages.
 
-A conversation can look like:
+Example:
 
 ```text
 Shopper:
 waterproof hiking shoes under €200
 
 Assistant:
-I found 6 matching products.
+I found matching products.
 
 Shopper:
 only black ones
@@ -188,25 +210,25 @@ Assistant:
 WildPath Trail Runner 2 was selected for your cart.
 ```
 
-Supported conversational operations currently include:
+Supported conversational operations include:
 
 - refining previous search constraints
 - cheapest product lookup
 - most expensive product lookup
 - references such as first, second and third product
-- comparison of current products
-- add-to-cart commands
+- comparison of current recommendations
+- conversational add-to-cart commands
 - continued use of previous shopping intent
 
-Simple ecommerce operations are handled deterministically rather than delegating every action to a language model.
+Simple commerce operations are handled deterministically rather than delegating every action to a language model.
 
 ---
 
-## Product comparison
+# Product comparison
 
 The storefront can compare products from the current recommendation set.
 
-The comparison includes data such as:
+The comparison uses structured catalog data such as:
 
 ```text
 Product
@@ -220,13 +242,13 @@ Color
 Use case
 ```
 
-The comparison is generated from structured catalog data rather than free-form generated text.
+This keeps comparison factual and tied directly to product data.
 
 ---
 
-## Cart
+# Cart
 
-The current frontend includes a client-side shopping cart.
+The frontend includes a client-side shopping cart.
 
 Supported interactions include:
 
@@ -238,77 +260,368 @@ Supported interactions include:
 - calculate line totals
 - calculate cart total
 
-The current cart is intentionally local to the demo application. A commerce-platform cart adapter will be added separately.
+The current cart is intentionally local to the demo application.
+
+A platform-specific cart adapter can be added separately.
 
 ---
 
-## Search architecture
+# Catalog adapters
+
+The discovery engine operates on a common internal `Product` model.
+
+External catalog formats are converted into that model through isolated adapters.
+
+Currently supported:
 
 ```text
-                        Shopper
-                           |
-                           v
-                  Next.js Storefront
-                           |
-              +------------+-------------+
-              |                          |
-              v                          v
-         Search UI                Conversation UI
-              |                          |
-              +-------------+------------+
-                            |
-                            v
-                         FastAPI
-                            |
-              +-------------+-------------+
-              |                           |
-              v                           v
-     Commerce Search Service      Conversation Service
-              |                           |
-              |                    +------+------+
-              |                    |             |
-              |                 Context       Actions
-              |                    |             |
-              |                    |       +-----+------+
-              |                    |       |     |      |
-              |                    |    Refine Compare Cart
-              |                    |
-              +----------+---------+
-                         |
-                         v
-                  Shopping Intent
-                         |
-              +----------+----------+
-              |                     |
-              v                     v
-       Ambiguity Detection     Hard Constraints
-              |                     |
-              +----------+----------+
-                         |
-                         v
-                 Hybrid Retrieval
-                 /              \
-                v                v
-        Keyword Search      Semantic Search
-          TF-IDF            Embeddings
-                \                /
-                 +------+-------+
-                        |
-                        v
-                 Ranked Products
+Generic JSON
+Generic CSV
+Shopify-style JSON
+```
+
+Architecture:
+
+```text
+Generic JSON ──────┐
+Generic CSV ───────┼──────┐
+Shopify data ──────┘      │
+                          ▼
+                   Catalog adapters
+                          │
+                          ▼
+                  Common Product model
+                          │
+                          ▼
+                    CommerceRuntime
+                          │
+             ┌────────────┴────────────┐
+             ▼                         ▼
+       Retrieval layer           Commerce services
+```
+
+This means additional sources such as WooCommerce, Magento, BigCommerce, ERP or PIM systems can be added without rewriting the search engine.
+
+---
+
+# Generic JSON import
+
+The JSON adapter supports either:
+
+```json
+[
+  {
+    "id": "product-1",
+    "title": "Example Product"
+  }
+]
+```
+
+or:
+
+```json
+{
+  "products": [
+    {
+      "id": "product-1",
+      "title": "Example Product"
+    }
+  ]
+}
+```
+
+Products are validated against the application's Pydantic product model before being accepted.
+
+---
+
+# Generic CSV import
+
+The CSV adapter supports one product per row.
+
+Required columns:
+
+```text
+id
+title
+description
+category
+brand
+price
+```
+
+Optional ecommerce fields currently include:
+
+```text
+currency
+inventory
+tags
+color
+waterproof
+lightweight
+use_case
+```
+
+Tags use `|` as the separator:
+
+```text
+trail|rain|mountain
+```
+
+Boolean values such as:
+
+```text
+true
+false
+yes
+no
+1
+0
+```
+
+are normalized during import.
+
+---
+
+# Shopify catalog adapter
+
+The Shopify adapter maps Shopify-style GraphQL product data into the common product model.
+
+It supports common connection structures such as:
+
+```json
+{
+  "products": {
+    "nodes": []
+  }
+}
+```
+
+and GraphQL edge structures:
+
+```json
+{
+  "products": {
+    "edges": [
+      {
+        "node": {}
+      }
+    ]
+  }
+}
+```
+
+The adapter maps fields such as:
+
+```text
+Product ID
+Title
+Description
+Product type
+Vendor
+Tags
+Variants
+SKU
+Price
+Availability
+Selected options
+```
+
+into the application's internal ecommerce model.
+
+For the current portfolio version, Shopify data is imported from a JSON payload. A live Shopify API connection is not required for the core discovery architecture.
+
+---
+
+# Runtime catalog management
+
+Catalog imports do more than replace an in-memory product array.
+
+When a new catalog is loaded, the application rebuilds the services that depend on product data:
+
+```text
+Imported catalog
+      ↓
+Common Product model
+      ↓
+Keyword index rebuilt
+      ↓
+Semantic embeddings rebuilt
+      ↓
+Hybrid engine rebuilt
+      ↓
+Commerce search rebuilt
+      ↓
+Conversation service rebuilt
+```
+
+The storefront can then search the newly imported catalog immediately.
+
+No FastAPI restart is required.
+
+The demo catalog can also be restored at runtime.
+
+---
+
+# Merchant interface
+
+A dedicated merchant page is available at:
+
+```text
+http://localhost:3000/merchant
+```
+
+The merchant interface provides:
+
+## Catalog overview
+
+- active catalog source
+- number of products
+- number of products in stock
+- number of variants
+- number of categories
+- number of brands
+- category overview
+- brand overview
+
+## Catalog import
+
+Supported sources:
+
+```text
+Generic JSON
+Generic CSV
+Shopify JSON
+```
+
+After import, the search runtime is rebuilt automatically.
+
+## Demo reset
+
+The original deterministic demo catalog can be restored from the merchant interface.
+
+## Search configuration
+
+Merchants can configure:
+
+```text
+Maximum recommendations
+Semantic search weight
+Keyword search weight
+Hide unavailable products
+```
+
+Search weights are normalized by the backend when necessary.
+
+For example:
+
+```text
+Semantic = 0.8
+Keyword  = 0.8
+```
+
+becomes:
+
+```text
+Semantic = 0.5
+Keyword  = 0.5
+```
+
+The embedding index does not need to be rebuilt when only ranking configuration changes.
+
+---
+
+# Application architecture
+
+```text
+                         Shopper
+                            │
+                            ▼
+                   Next.js Storefront
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+              ▼                           ▼
+          Search UI                Conversation UI
+              │                           │
+              └─────────────┬─────────────┘
+                            │
+                            ▼
+                          FastAPI
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+              ▼                           ▼
+       Commerce Search             Conversation
+           Service                    Service
+              │                           │
+              │                 ┌─────────┴─────────┐
+              │                 │                   │
+              │              Context             Actions
+              │                                     │
+              │                          ┌──────────┼──────────┐
+              │                          ▼          ▼          ▼
+              │                       Refine     Compare      Cart
+              │
+              ▼
+        Shopping Intent
+              │
+       ┌──────┴───────┐
+       ▼              ▼
+ Ambiguity        Hard commerce
+ detection         constraints
+       │              │
+       └──────┬───────┘
+              ▼
+        Hybrid retrieval
+          /          \
+         ▼            ▼
+    TF-IDF          Semantic
+    keyword        embeddings
+         \            /
+          └─────┬────┘
+                ▼
+         Ranked products
+```
+
+Catalog management operates alongside this flow:
+
+```text
+                   Merchant UI
+                       │
+                       ▼
+                 Catalog import
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+        JSON          CSV        Shopify
+          │            │            │
+          └────────────┼────────────┘
+                       ▼
+                 Adapter layer
+                       │
+                       ▼
+              Common Product model
+                       │
+                       ▼
+                CommerceRuntime
+                       │
+                       ▼
+              Search services rebuilt
 ```
 
 ---
 
-## Retrieval methods
+# Retrieval methods
 
-### Keyword search
+## Keyword search
 
 The keyword baseline uses TF-IDF with unigram and bigram features.
 
-It is useful when shopper terminology closely matches text in the product catalog.
+It is useful when shopper terminology closely matches catalog text.
 
-### Semantic search
+---
+
+## Semantic search
 
 Semantic retrieval currently uses:
 
@@ -325,38 +638,40 @@ The product representation includes:
 - tags
 - structured attributes
 
-This allows conceptually related products to be retrieved even when the shopper does not use the exact catalog terminology.
+This allows conceptually related products to be retrieved even when exact terminology differs.
 
-### Hybrid search
+---
+
+## Hybrid search
 
 Keyword and semantic scores are normalized and combined.
 
-Current weighting:
+Default configuration:
 
 ```text
 Semantic: 65%
 Keyword:  35%
 ```
 
-The current weights are application defaults and can be tuned later.
+These values are configurable through the merchant interface.
 
 ---
 
-## Relevance vs eligibility
+# Relevance vs eligibility
 
-A central design principle is the distinction between:
+A central design principle is separating:
 
 ```text
 Relevance
 ```
 
-and:
+from:
 
 ```text
 Eligibility
 ```
 
-Retrieval scores answer:
+Retrieval answers:
 
 > How relevant is this product to the shopper's request?
 
@@ -370,24 +685,24 @@ For example:
 waterproof hiking shoes under €120
 ```
 
-requires the product to satisfy the requested category, waterproof requirement and price ceiling before ranking determines the final order.
+requires the product to satisfy category, waterproof and price requirements before its relevance score determines its position.
 
 ---
 
-## Frontend
+# Frontend
 
-The storefront is built with Next.js and TypeScript.
+The application frontend is built with Next.js and TypeScript.
 
-Current UI functionality includes:
+Current storefront functionality includes:
 
-- natural-language search
+- natural-language product search
 - example shopping queries
 - extracted intent chips
 - responsive product cards
 - match explanations
 - clarification flow
 - product detail drawer
-- conversational follow-up interface
+- conversational refinement
 - structured product comparison
 - shopping cart drawer
 - quantity management
@@ -396,15 +711,33 @@ Current UI functionality includes:
 - API error handling
 - responsive mobile layout
 
-Frontend development URL:
+Current merchant functionality includes:
+
+- catalog dashboard
+- catalog source overview
+- JSON catalog upload
+- CSV catalog upload
+- Shopify-style catalog upload
+- demo catalog restoration
+- search configuration
+- catalog statistics
+- category and brand overview
+
+Storefront:
 
 ```text
 http://localhost:3000
 ```
 
+Merchant interface:
+
+```text
+http://localhost:3000/merchant
+```
+
 ---
 
-## API
+# API
 
 The backend is built with FastAPI.
 
@@ -414,53 +747,69 @@ API documentation:
 http://127.0.0.1:8000/docs
 ```
 
-### Health
+---
+
+## Health
 
 ```http
 GET /health
 ```
 
-### Products
+Returns application health together with current catalog information.
+
+---
+
+## Products
 
 ```http
 GET /products
 ```
 
-### Keyword search
+Returns products from the currently active runtime catalog.
+
+---
+
+## Keyword search
 
 ```http
 GET /search?q=mountain+walking
 ```
 
-### Semantic search
+---
+
+## Semantic search
 
 ```http
 GET /search/semantic?q=something+for+wet+mountain+walks
 ```
 
-### Commerce search
+---
+
+## Commerce search
 
 ```http
 GET /search/commerce?q=black+waterproof+hiking+shoes+under+€120
 ```
 
-Commerce search automatically:
+Commerce search:
 
 1. interprets the natural-language request
-2. extracts shopping constraints
+2. extracts structured shopping constraints
 3. checks whether the product type is sufficiently clear
 4. asks for clarification when necessary
 5. performs hybrid retrieval
-6. enforces hard commerce constraints
+6. applies hard commerce constraints
 7. returns ranked products
 
-### Conversation
+---
+
+## Conversation
 
 ```http
 POST /conversation
 ```
 
-Example request:
+Example:
 
 ```json
 {
@@ -483,12 +832,11 @@ Example request:
       "clarification_question": null
     },
     "current_product_ids": []
-  },
-  "top_k": 6
+  }
 }
 ```
 
-The conversation service can return actions such as:
+Possible conversation actions include:
 
 ```text
 search
@@ -501,9 +849,92 @@ clarify
 
 ---
 
-## Catalog
+# Merchant API
 
-The current demo catalog contains 120 deterministic synthetic ecommerce products across:
+## Catalog status
+
+```http
+GET /merchant/catalog
+```
+
+Example information returned:
+
+```json
+{
+  "source": "synthetic-demo",
+  "product_count": 120,
+  "products_in_stock": 118,
+  "variant_count": 0,
+  "category_count": 4,
+  "brand_count": 5,
+  "categories": [],
+  "brands": [],
+  "settings": {}
+}
+```
+
+Exact stock totals depend on the generated catalog.
+
+---
+
+## Import catalog
+
+```http
+POST /merchant/catalog/import
+```
+
+Supported source values:
+
+```text
+generic-json
+generic-csv
+shopify
+```
+
+A successful import automatically replaces the runtime catalog and rebuilds retrieval services.
+
+---
+
+## Restore demo catalog
+
+```http
+POST /merchant/catalog/reset
+```
+
+Restores the bundled deterministic development catalog.
+
+---
+
+## Read search settings
+
+```http
+GET /merchant/settings
+```
+
+---
+
+## Update search settings
+
+```http
+PUT /merchant/settings
+```
+
+Example:
+
+```json
+{
+  "max_recommendations": 6,
+  "semantic_weight": 0.65,
+  "keyword_weight": 0.35,
+  "hide_unavailable": true
+}
+```
+
+---
+
+# Demo catalog
+
+The bundled development catalog contains 120 deterministic synthetic ecommerce products across:
 
 ```text
 trail-shoes
@@ -512,7 +943,7 @@ backpacks
 camping
 ```
 
-Products contain:
+Products include:
 
 - ID
 - title
@@ -528,13 +959,33 @@ Products contain:
 - SKUs
 - option values
 
-The synthetic catalog provides a reproducible development environment while keeping the discovery engine independent of any single ecommerce platform.
+The synthetic data provides a reproducible development environment.
 
-External catalog adapters are planned next.
+The runtime is no longer restricted to this catalog because external catalog adapters can replace it dynamically.
 
 ---
 
-## Project structure
+# Example import catalogs
+
+Example files are included under:
+
+```text
+backend/data/import_examples/
+```
+
+Current examples:
+
+```text
+generic-products.json
+generic-products.csv
+shopify-products.json
+```
+
+These can be used directly from the merchant interface when running the project locally.
+
+---
+
+# Project structure
 
 ```text
 ai-commerce-product-discovery/
@@ -543,10 +994,17 @@ ai-commerce-product-discovery/
 │   ├── app/
 │   │   ├── main.py
 │   │   │
+│   │   ├── catalog/
+│   │   │   ├── __init__.py
+│   │   │   ├── generic_json.py
+│   │   │   ├── generic_csv.py
+│   │   │   └── shopify.py
+│   │   │
 │   │   ├── models/
 │   │   │   ├── product.py
 │   │   │   ├── intent.py
-│   │   │   └── conversation.py
+│   │   │   ├── conversation.py
+│   │   │   └── merchant.py
 │   │   │
 │   │   ├── search/
 │   │   │   ├── keyword.py
@@ -558,10 +1016,15 @@ ai-commerce-product-discovery/
 │   │   │   └── conversation.py
 │   │   │
 │   │   └── services/
-│   │       └── catalog.py
+│   │       ├── catalog.py
+│   │       └── runtime.py
 │   │
 │   ├── data/
-│   │   └── products.json
+│   │   ├── products.json
+│   │   └── import_examples/
+│   │       ├── generic-products.json
+│   │       ├── generic-products.csv
+│   │       └── shopify-products.json
 │   │
 │   ├── scripts/
 │   │   └── generate_catalog.py
@@ -571,7 +1034,8 @@ ai-commerce-product-discovery/
 │   │   ├── test_semantic_search.py
 │   │   ├── test_hybrid_search.py
 │   │   ├── test_intent.py
-│   │   └── test_conversation.py
+│   │   ├── test_conversation.py
+│   │   └── test_catalog_adapters.py
 │   │
 │   └── pytest.ini
 │
@@ -580,7 +1044,9 @@ ai-commerce-product-discovery/
 │   │   ├── app/
 │   │   │   ├── page.tsx
 │   │   │   ├── layout.tsx
-│   │   │   └── globals.css
+│   │   │   ├── globals.css
+│   │   │   └── merchant/
+│   │   │       └── page.tsx
 │   │   │
 │   │   ├── lib/
 │   │   │   └── api.ts
@@ -597,18 +1063,18 @@ ai-commerce-product-discovery/
 
 ---
 
-## Running locally
+# Running locally
 
-### Backend
+## Backend
 
-Create and activate a Python virtual environment:
+Create the Python environment:
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install backend dependencies:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -635,7 +1101,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-### Frontend
+## Frontend
 
 Open another terminal:
 
@@ -651,6 +1117,12 @@ Frontend:
 http://localhost:3000
 ```
 
+Merchant interface:
+
+```text
+http://localhost:3000/merchant
+```
+
 The frontend expects:
 
 ```env
@@ -659,9 +1131,9 @@ NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000
 
 ---
 
-## Tests
+# Tests
 
-Run backend tests:
+Run:
 
 ```bash
 cd backend
@@ -671,10 +1143,10 @@ python -m pytest
 Current result:
 
 ```text
-15 passed
+20 passed
 ```
 
-The backend test suite currently covers:
+The backend tests currently cover:
 
 - keyword retrieval
 - semantic retrieval
@@ -684,15 +1156,19 @@ The backend test suite currently covers:
 - price parsing
 - category inference
 - ambiguity detection
-- new conversational searches
+- conversational search
 - follow-up refinement
 - cheapest-product lookup
 - product comparison
 - conversational cart selection
+- generic JSON catalog conversion
+- generic CSV catalog conversion
+- Shopify-style catalog conversion
+- catalog validation and invalid input handling
 
 ---
 
-## Frontend quality checks
+# Frontend quality checks
 
 Lint:
 
@@ -707,31 +1183,33 @@ Production build:
 npm run build
 ```
 
-The current frontend passes both ESLint and the Next.js production build.
+The current frontend passes ESLint and the Next.js production build.
 
 ---
 
-## Current development status
+# Current development status
 
-### Completed
+## Completed
 
-#### Foundation
+### Foundation
 
-- ecommerce product data model
-- deterministic synthetic catalog
+- ecommerce product model
+- deterministic demo catalog
 - FastAPI backend
 - Next.js frontend
-- frontend/backend API integration
+- frontend/backend integration
 
-#### Search
+### Search
 
-- keyword retrieval
+- TF-IDF retrieval
 - semantic retrieval
 - hybrid retrieval
 - score normalization
-- hard ecommerce filtering
+- commerce filtering
+- configurable ranking weights
+- configurable result count
 
-#### Shopping intelligence
+### Shopping intelligence
 
 - natural-language intent parsing
 - category recognition
@@ -739,22 +1217,24 @@ The current frontend passes both ESLint and the Next.js production build.
 - price extraction
 - attribute extraction
 - ambiguity detection
-- clarification flow
+- clarification handling
 - shopping context
 
-#### Conversational commerce
+### Conversational commerce
 
-- follow-up search refinement
-- cheapest / most expensive product queries
+- follow-up refinement
+- cheapest / most expensive queries
 - ordinal product references
 - structured comparison
 - conversational product selection
-- add-to-cart commands
+- add-to-cart actions
 
-#### Storefront
+### Storefront
 
+- natural-language search
 - product cards
 - intent display
+- match explanations
 - product detail drawer
 - clarification interface
 - conversation interface
@@ -763,54 +1243,62 @@ The current frontend passes both ESLint and the Next.js production build.
 - quantity management
 - responsive layout
 
+### Catalog architecture
+
+- common internal product model
+- generic JSON adapter
+- generic CSV adapter
+- Shopify-style adapter
+- runtime catalog replacement
+- automatic search-index rebuild
+- automatic semantic-embedding rebuild
+- demo catalog reset
+- source-independent discovery engine
+
+### Merchant tools
+
+- catalog overview
+- catalog statistics
+- catalog upload
+- source selection
+- search configuration
+- recommendation limit
+- retrieval weighting
+- inventory visibility configuration
+
 ---
 
-## Remaining work
+# Remaining work
 
-### Catalog integrations
+The functional product is now largely complete.
 
-Replace the synthetic-only catalog source with a reusable adapter architecture.
+The final development stage focuses on delivery and portfolio quality.
 
-Planned sources include:
+## Day 8
 
-```text
-Generic JSON / CSV
-Shopify
-```
-
-The core discovery engine should not depend on a single commerce platform.
-
-### Merchant configuration
-
-Add configuration for search and catalog behavior such as:
-
-```text
-Maximum recommendations
-Inventory behavior
-Search weighting
-Available catalog
-```
-
-### Delivery and portfolio polish
-
-Final project work will include:
+Planned final work:
 
 ```text
 Docker
+Production environment configuration
 Deployment
-Environment configuration
+Final error handling
+UI polish
 Architecture documentation
 Screenshots
 Demo recording
-Final README polish
+GitHub presentation
 Portfolio case study
+Final README polish
 ```
+
+After this stage, feature development for Project 1 stops and the project moves into portfolio/demo mode.
 
 ---
 
-## Technology
+# Technology
 
-### Backend
+## Backend
 
 ```text
 Python 3.12
@@ -822,7 +1310,7 @@ NumPy
 pytest
 ```
 
-### Frontend
+## Frontend
 
 ```text
 Next.js
@@ -831,7 +1319,7 @@ TypeScript
 CSS
 ```
 
-### AI / retrieval
+## AI and retrieval
 
 ```text
 TF-IDF
@@ -843,26 +1331,101 @@ Constraint-aware filtering
 Conversational state
 ```
 
----
-
-## Project goal
-
-This project is being built as a practical AI commerce product rather than a standalone machine-learning experiment.
-
-The objective is to demonstrate how AI retrieval, natural-language understanding and deterministic ecommerce logic can work together inside a complete shopping experience.
-
-The system combines:
+## Architecture
 
 ```text
-AI retrieval
+Catalog adapters
+Runtime dependency rebuilding
+REST APIs
+Shared internal product model
+Merchant configuration
+Frontend/backend separation
+```
+
+---
+
+# Design principles
+
+## Platform independence
+
+Search and conversational logic depend on the common product model rather than Shopify-specific structures.
+
+## AI where useful, deterministic logic where safer
+
+Semantic retrieval handles fuzzy meaning.
+
+Structured logic handles:
+
+```text
+price limits
+inventory
+product attributes
+cart selection
+comparisons
+ordinal references
+```
+
+## Relevance does not override commerce requirements
+
+High semantic similarity cannot bypass explicit shopper constraints.
+
+## External data should not require search-engine rewrites
+
+Adapters transform catalog data into the common model.
+
+The retrieval system remains unchanged.
+
+## Runtime configuration should not require deployment
+
+Catalogs and ranking settings can be changed while the application is running.
+
+---
+
+# Current limitations
+
+This is currently a portfolio/demo application rather than a production commerce platform.
+
+Not yet implemented:
+
+- persistent database
+- authentication
+- merchant accounts
+- production checkout
+- persistent server-side cart
+- live Shopify Admin or Storefront API authentication
+- webhook synchronization
+- background catalog indexing jobs
+- distributed/vector search infrastructure
+- production monitoring
+
+Those concerns are intentionally outside the scope of the initial portfolio project.
+
+---
+
+# Project goal
+
+This project demonstrates how AI retrieval, natural-language understanding, deterministic commerce rules, catalog integrations and a complete frontend experience can work together inside an ecommerce product.
+
+The application combines:
+
+```text
+Natural-language understanding
 +
-commerce rules
+keyword retrieval
 +
-structured product data
+semantic retrieval
++
+commerce constraints
 +
 conversation context
 +
-frontend product experience
+catalog adapters
++
+runtime configuration
++
+merchant tooling
++
+storefront experience
 ```
 
-The next stage focuses on making the engine reusable with external ecommerce catalogs and platform adapters.
+The result is not tied to a single ecommerce platform and can serve as a foundation for product discovery systems across different commerce stacks.
