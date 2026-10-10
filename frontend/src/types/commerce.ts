@@ -84,3 +84,27 @@ export type ProductVariant = {
     role: "user" | "assistant";
     text: string;
   };
+
+  export type SearchSettings = {
+    max_recommendations: number;
+    semantic_weight: number;
+    keyword_weight: number;
+    hide_unavailable: boolean;
+  };
+  
+  export type CatalogStatus = {
+    source: string;
+    product_count: number;
+    products_in_stock: number;
+    variant_count: number;
+    category_count: number;
+    brand_count: number;
+    categories: string[];
+    brands: string[];
+    settings: SearchSettings;
+  };
+  
+  export type CatalogSource =
+    | "generic-json"
+    | "generic-csv"
+    | "shopify";

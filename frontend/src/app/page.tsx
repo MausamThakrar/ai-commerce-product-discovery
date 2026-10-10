@@ -508,6 +508,16 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="heroContent">
+
+          <div className="storefrontTopbar">
+            <span>
+              AI COMMERCE
+            </span>
+
+            <a href="/merchant">
+              Merchant setup →
+            </a>
+          </div>
           <div className="eyebrow">
             AI COMMERCE DISCOVERY
           </div>

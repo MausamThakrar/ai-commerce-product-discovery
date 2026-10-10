@@ -718,3 +718,258 @@ button {
     flex-direction: column;
   }
 }
+
+.merchantPage {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 24px 100px;
+}
+
+.merchantHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 42px;
+}
+
+.merchantHeader h1 {
+  margin: 12px 0;
+  font-size: clamp(44px, 7vw, 72px);
+  letter-spacing: -0.055em;
+}
+
+.merchantHeader p {
+  max-width: 620px;
+  color: var(--text-soft);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.merchantBackLink {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.merchantSection {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.merchantSection h2 {
+  margin: 10px 0 12px;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+
+.merchantSection > p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.merchantSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sourceBadge {
+  height: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.statCard {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+}
+
+.statCard strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 30px;
+}
+
+.statCard span {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.catalogMetadata {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.metadataChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.metadataChips span {
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.merchantGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.merchantField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.merchantField > span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.merchantField input,
+.merchantField select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.merchantToggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.merchantPrimaryButton,
+.merchantSecondaryButton {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.merchantPrimaryButton {
+  border: 0;
+  background: var(--accent);
+  color: white;
+}
+
+.merchantSecondaryButton {
+  border: 1px solid var(--border);
+  background: transparent;
+}
+
+.merchantPrimaryButton:disabled,
+.merchantSecondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.selectedFile {
+  font-size: 13px;
+}
+
+.merchantNotice {
+  margin-bottom: 18px;
+  padding: 15px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.successMessage {
+  background: var(--accent-soft);
+}
+
+.merchantArchitecture {
+  margin-top: 18px;
+}
+
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.pipeline div {
+  padding: 12px 15px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.pipeline > span {
+  color: var(--text-soft);
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .merchantGrid,
+  .catalogMetadata {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .merchantHeader {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .merchantPage {
+    padding:
+      45px 18px
+      80px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.storefrontTopbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.storefrontTopbar a {
+  color: var(--text);
+  text-decoration: none;
+}
