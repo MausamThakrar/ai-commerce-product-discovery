@@ -1,0 +1,3 @@
+id,title,description,category,brand,price,currency,inventory,tags,color,waterproof,lightweight,use_case
+csv-shoe-1,Rain Trail Pro,Waterproof footwear for wet trail walks,trail-shoes,CSV Outdoor,119.90,EUR,11,trail|rain|mountain,black,true,true,mountain trekking
+csv-pack-1,Weekend Trek Pack,Light pack for carrying gear on short mountain trips,backpacks,CSV Outdoor,89.90,EUR,7,backpack|weekend|mountain,blue,true,true,weekend hiking

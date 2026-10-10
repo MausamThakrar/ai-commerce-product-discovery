@@ -1,0 +1,48 @@
+{
+    "products": [
+      {
+        "id": "demo-shoe-1",
+        "title": "Storm Trail One",
+        "description": "Lightweight waterproof trail footwear designed for wet mountain walks.",
+        "category": "trail-shoes",
+        "brand": "Demo Outdoor",
+        "price": 99.9,
+        "currency": "EUR",
+        "tags": [
+          "trail",
+          "mountain",
+          "rain"
+        ],
+        "attributes": {
+          "color": "black",
+          "waterproof": true,
+          "lightweight": true,
+          "use_case": "mountain trekking"
+        },
+        "inventory": 14,
+        "variants": []
+      },
+      {
+        "id": "demo-pack-1",
+        "title": "Weekend Mountain Pack",
+        "description": "A lightweight backpack designed for weekend mountain trips.",
+        "category": "backpacks",
+        "brand": "Demo Outdoor",
+        "price": 79.9,
+        "currency": "EUR",
+        "tags": [
+          "backpack",
+          "weekend",
+          "mountain"
+        ],
+        "attributes": {
+          "color": "green",
+          "waterproof": true,
+          "lightweight": true,
+          "use_case": "weekend hiking"
+        },
+        "inventory": 8,
+        "variants": []
+      }
+    ]
+  }

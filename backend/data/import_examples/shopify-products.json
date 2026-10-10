@@ -1,0 +1,63 @@
+{
+    "products": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Product/1001",
+          "title": "Alpine Storm Runner",
+          "description": "Waterproof trail footwear for demanding mountain conditions.",
+          "productType": "trail-shoes",
+          "vendor": "North Demo",
+          "tags": [
+            "trail",
+            "mountain",
+            "color:black",
+            "waterproof:true",
+            "lightweight:true",
+            "use_case:mountain trekking"
+          ],
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/2001",
+                "sku": "ASR-BLK-42",
+                "title": "Black / 42",
+                "price": {
+                  "amount": "129.90"
+                },
+                "availableForSale": true,
+                "selectedOptions": [
+                  {
+                    "name": "Color",
+                    "value": "Black"
+                  },
+                  {
+                    "name": "Size",
+                    "value": "42"
+                  }
+                ]
+              },
+              {
+                "id": "gid://shopify/ProductVariant/2002",
+                "sku": "ASR-BLK-43",
+                "title": "Black / 43",
+                "price": {
+                  "amount": "129.90"
+                },
+                "availableForSale": true,
+                "selectedOptions": [
+                  {
+                    "name": "Color",
+                    "value": "Black"
+                  },
+                  {
+                    "name": "Size",
+                    "value": "43"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
