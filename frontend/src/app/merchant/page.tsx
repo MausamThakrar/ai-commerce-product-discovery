@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   ChangeEvent,
   FormEvent,
@@ -60,29 +62,37 @@ export default function MerchantPage() {
     useState("");
 
 
-  async function loadStatus() {
-    try {
-      setError("");
-
-      const catalog =
-        await getCatalogStatus();
-
-      setStatus(catalog);
-      setSettings(
-        catalog.settings
-      );
-    } catch {
-      setError(
-        "Could not load merchant configuration."
-      );
-    } finally {
-      setLoading(false);
-    }
-  }
-
-
   useEffect(() => {
-    loadStatus();
+    let cancelled = false;
+
+    getCatalogStatus()
+      .then((catalog) => {
+        if (cancelled) {
+          return;
+        }
+
+        setStatus(catalog);
+        setSettings(catalog.settings);
+        setError("");
+      })
+      .catch(() => {
+        if (cancelled) {
+          return;
+        }
+
+        setError(
+          "Could not load merchant configuration."
+        );
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
 
@@ -124,6 +134,7 @@ export default function MerchantPage() {
         );
 
       setStatus(catalog);
+
       setSettings(
         catalog.settings
       );
@@ -155,6 +166,7 @@ export default function MerchantPage() {
         await resetCatalog();
 
       setStatus(catalog);
+
       setSettings(
         catalog.settings
       );
@@ -247,12 +259,12 @@ export default function MerchantPage() {
           </p>
         </div>
 
-        <a
+        <Link
           className="merchantBackLink"
           href="/"
         >
           ← Storefront
-        </a>
+        </Link>
       </header>
 
 
