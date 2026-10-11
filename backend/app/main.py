@@ -30,24 +30,36 @@ from app.services.runtime import (
     CommerceRuntime,
 )
 
+import os
+
 
 app = FastAPI(
     title="AI Commerce Product Discovery",
     version="0.7.0",
 )
 
+default_origins = (
+    "http://localhost:3000,"
+    "http://127.0.0.1:3000"
+)
+
+cors_origins = [
+    origin.strip()
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        default_origins,
+    ).split(",")
+    if origin.strip()
+]
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 #
 # Runtime
